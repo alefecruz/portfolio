@@ -1,3 +1,4 @@
+import * as themeMapper from './mappers';
 export interface IColorTheme {
     ACCENTED: string;
     PRIMARY: string;
@@ -44,4 +45,12 @@ export interface ISpacingTheme {
     XXLARGE: string;
     HUGE: string;
     XHUGE: string;
+}
+
+export interface ISelectTheme {
+    color: keyof typeof themeMapper.colorMap;
+    font: keyof typeof themeMapper.fontMap;
+    size: keyof typeof themeMapper.sizeMap;
+    media: keyof typeof themeMapper.mediaMap;
+    spacing: keyof typeof themeMapper.spacingMap;
 }

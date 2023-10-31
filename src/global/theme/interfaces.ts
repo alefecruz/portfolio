@@ -37,6 +37,7 @@ export interface ISizeTheme {
 }
 
 export interface ISpacingTheme {
+    XXSMALL: string;
     XSMALL: string;
     SMALL: string;
     MEDIUM: string;

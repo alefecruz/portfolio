@@ -1,16 +1,32 @@
 'use client';
 
-import { Text } from '@/components/atoms/text';
+import { Button } from '@/components/molecules/button';
 
 export default function App() {
     return (
         <main>
-            <Text color="DANGER" format="BUTTON">
-                Good Night World! as
-            </Text>
-            <Text color="DANGER" format="TITLE_1" letterCase="CAPITALIZE">
-                Good Night World! as
-            </Text>
+            <Button
+                format="OUTLINE_ACCENTED"
+                size="XXSMALL"
+                label="Entre em contato"
+                onPress={() => {}}
+                iconLeftName="DEVOT"
+            />
+            <Button
+                format="OUTLINE_SECONDARY"
+                size="XSMALL"
+                label="Entre em contato"
+                onPress={() => {}}
+                iconLeftName="DEVOT"
+                isStretch
+            />
+            <Button
+                size="SMALL"
+                format="OUTLINE_PRIMARY"
+                label="Entre em contato"
+                onPress={() => {}}
+                iconLeftName="DEVOT"
+            />
         </main>
     );
 }

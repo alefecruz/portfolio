@@ -1,31 +1,13 @@
 'use client';
 
-import { Button } from '@/components/molecules/button';
+import { Image } from '@/components/atoms/image';
 
 export default function App() {
     return (
         <main>
-            <Button
-                format="OUTLINE_ACCENTED"
-                size="XXSMALL"
-                label="Entre em contato"
-                onPress={() => {}}
-                iconLeftName="DEVOT"
-            />
-            <Button
-                format="OUTLINE_SECONDARY"
-                size="XSMALL"
-                label="Entre em contato"
-                onPress={() => {}}
-                iconLeftName="DEVOT"
-                isStretch
-            />
-            <Button
-                size="SMALL"
-                format="OUTLINE_PRIMARY"
-                label="Entre em contato"
-                onPress={() => {}}
-                iconLeftName="DEVOT"
+            <Image
+                source="https://cursinhoparamedicina.com.br/wp-content/uploads/2022/10/Paisagem-1.jpg"
+                alt="test"
             />
         </main>
     );

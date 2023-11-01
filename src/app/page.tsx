@@ -1,14 +1,14 @@
 'use client';
 
-import { Image } from '@/components/atoms/image';
+import { Tag } from '@/components/molecules/tag';
 
 export default function App() {
     return (
         <main>
-            <Image
-                source="https://cursinhoparamedicina.com.br/wp-content/uploads/2022/10/Paisagem-1.jpg"
-                alt="test"
-            />
+            <Tag label="ReactJs" />
+            <Tag label="NextJs" color="PRIMARY" />
+            <Tag label="Typescript" />
+            <Tag label="Javascript" />
         </main>
     );
 }

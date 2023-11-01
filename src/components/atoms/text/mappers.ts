@@ -24,6 +24,10 @@ export const formatMepper = {
         font-size: ${({ theme }) => theme.SIZES.SMALL};
         text-transform: uppercase;
     `,
+    TAG: css`
+        ${({ theme }) => theme.FONTS.MEDIUM};
+        font-size: ${({ theme }) => theme.SIZES.SMALL};
+    `,
 };
 
 export const letterCaseMapper = {

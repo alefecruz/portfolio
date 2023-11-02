@@ -22,7 +22,7 @@ const Button = ({
             format={format}
             size={size}
             isStretch={isStretch}
-            onPress={onPress}
+            onClick={onPress}
         >
             {iconLeftName !== undefined &&
                 format !== 'NONE_PRIMARY' &&

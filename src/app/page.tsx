@@ -1,16 +1,36 @@
 'use client';
 
-import { Line } from '@/components/atoms/line';
+import { Navbar } from '@/components/organisms/navbar';
 
 export default function App() {
     return (
         <main>
-            <br />
-            <Line strokeSize="LARGE" color="PRIMARY" width={20} />
-            <br />
-            <Line strokeSize="SMALL" color="SECONDARY" /> adadasdds
-            <br />
-            <Line strokeSize="MEDIUM" />
+            <Navbar
+                optionList={[
+                    {
+                        label: 'Sobre',
+                        isSelected: true,
+                        onPress: () => {},
+                    },
+                    {
+                        label: 'Experiência',
+                        isSelected: false,
+                        onPress: () => {},
+                    },
+                    {
+                        label: 'Projetos',
+                        isSelected: false,
+                        onPress: () => {},
+                    },
+                    {
+                        label: 'Sobre',
+                        isSelected: false,
+                        onPress: () => {},
+                    },
+                ]}
+                optionSelectedColor="ACCENTED"
+                optionDontSelectedColor="PRIMARY"
+            />
         </main>
     );
 }

@@ -1,5 +1,5 @@
 export const strokeSizeMapper = {
-    SMALL: 0.1,
-    MEDIUM: 0.3,
-    LARGE: 0.5,
+    SMALL: 1,
+    MEDIUM: 3,
+    LARGE: 5,
 };

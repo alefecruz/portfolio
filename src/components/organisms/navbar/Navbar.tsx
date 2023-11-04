@@ -4,56 +4,50 @@ import * as S from './styles';
 
 import { INavbarProps } from './interfaces';
 import { Line } from '@/components/atoms/line';
-import { Button } from '@/components/molecules/button';
+import { Link } from '@/components/molecules/link';
 
-import { buttonFormatMapper } from './mappers';
+const FIRST_OPTION_INDEX = 0;
+const WIDTH_UNSELECTED_OPTION = 6;
+const WIDTH_SELECTED_OPTION = 8;
 
 const Navbar = ({
     optionList = [],
     optionDontSelectedColor = 'ACCENTED',
     optionSelectedColor = 'SECONDARY',
 }: INavbarProps): ReactElement => {
-    const [optionState, setOptionState] = useState(optionList);
-
-    const handleClick = (label: string) => {
-        setOptionState(
-            optionState.map((option) => {
-                if (option.label === label)
-                    return {
-                        ...option,
-                        isSelected: true,
-                    };
-                else
-                    return {
-                        ...option,
-                        isSelected: false,
-                    };
-            }),
-        );
-    };
+    const [selectedIndex, setSelectedIndex] = useState(FIRST_OPTION_INDEX);
 
     return (
         <S.NavbarContainer>
-            {optionState.map(({ label, isSelected, onPress }, index) => (
+            {optionList.map(({ label, navigate }, index) => (
                 <S.OptionContent key={index}>
                     <Line
-                        width={isSelected ? 8 : 6}
-                        strokeSize={isSelected ? 'LARGE' : 'MEDIUM'}
+                        width={
+                            selectedIndex === index
+                                ? WIDTH_SELECTED_OPTION
+                                : WIDTH_UNSELECTED_OPTION
+                        }
+                        strokeSize={
+                            selectedIndex === index ? 'LARGE' : 'MEDIUM'
+                        }
                         color={
-                            isSelected
+                            selectedIndex === index
                                 ? optionSelectedColor
                                 : optionDontSelectedColor
                         }
                     />
-                    <Button
-                        format={
-                            isSelected
-                                ? buttonFormatMapper[optionSelectedColor]
-                                : buttonFormatMapper[optionDontSelectedColor]
+                    <Link
+                        onClick={() => setSelectedIndex(index)}
+                        navigate={navigate}
+                        format="BUTTON"
+                        color={
+                            selectedIndex === index
+                                ? optionSelectedColor
+                                : optionDontSelectedColor
                         }
-                        label={label}
-                        onPress={() => handleClick(label)}
-                    />
+                    >
+                        {label}
+                    </Link>
                 </S.OptionContent>
             ))}
         </S.NavbarContainer>

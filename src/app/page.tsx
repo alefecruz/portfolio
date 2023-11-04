@@ -1,7 +1,6 @@
 'use client';
 
 import { Navbar } from '@/components/organisms/navbar';
-
 export default function App() {
     return (
         <main>
@@ -9,23 +8,15 @@ export default function App() {
                 optionList={[
                     {
                         label: 'Sobre',
-                        isSelected: true,
-                        onPress: () => {},
+                        navigate: '#about',
                     },
                     {
                         label: 'Experiência',
-                        isSelected: false,
-                        onPress: () => {},
+                        navigate: '#experience',
                     },
                     {
                         label: 'Projetos',
-                        isSelected: false,
-                        onPress: () => {},
-                    },
-                    {
-                        label: 'Sobre',
-                        isSelected: false,
-                        onPress: () => {},
+                        navigate: '#project',
                     },
                 ]}
                 optionSelectedColor="ACCENTED"

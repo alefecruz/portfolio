@@ -1,4 +1,5 @@
 import { IColorTheme } from '@/global/theme';
+import { ILinkProps } from '@/components/molecules/link';
 
 export interface INavbarProps {
     optionList?: IOptionNavbar[];
@@ -12,8 +13,6 @@ export interface INavbarProps {
     >;
 }
 
-interface IOptionNavbar {
+interface IOptionNavbar extends Pick<ILinkProps, 'navigate'> {
     label: string;
-    onPress: () => void;
-    isSelected: boolean;
 }

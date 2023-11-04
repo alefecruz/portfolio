@@ -43,22 +43,4 @@ export const formarMapper: {
         `,
         contentColor: 'LIGHT',
     },
-    NONE_ACCENTED: {
-        box: css`
-            background-color: transparent;
-        `,
-        contentColor: 'ACCENTED',
-    },
-    NONE_SECONDARY: {
-        box: css`
-            background-color: transparent;
-        `,
-        contentColor: 'SECONDARY',
-    },
-    NONE_PRIMARY: {
-        box: css`
-            background-color: transparent;
-        `,
-        contentColor: 'PRIMARY',
-    },
 };

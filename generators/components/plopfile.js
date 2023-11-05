@@ -6,7 +6,7 @@ module.exports = (plop) => {
                 type: 'list',
                 name: 'type',
                 message: 'What is your component type?',
-                choices: ['atom', 'molecules', 'organisms', 'template'],
+                choices: ['atoms', 'molecules', 'organisms', 'templates'],
             },
             {
                 type: 'input',

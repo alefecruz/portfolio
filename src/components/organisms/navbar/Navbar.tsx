@@ -30,7 +30,7 @@ const Navbar = ({
                         strokeSize={
                             selectedIndex === index ? 'LARGE' : 'MEDIUM'
                         }
-                        color={
+                        strokeColor={
                             selectedIndex === index
                                 ? optionSelectedColor
                                 : optionDontSelectedColor
@@ -40,7 +40,7 @@ const Navbar = ({
                         onClick={() => setSelectedIndex(index)}
                         navigate={navigate}
                         format="BUTTON"
-                        color={
+                        strokeColor={
                             selectedIndex === index
                                 ? optionSelectedColor
                                 : optionDontSelectedColor

@@ -3,6 +3,6 @@ import { strokeSizeMapper } from './mappers';
 
 export interface ILineProps {
     width?: number;
-    color?: keyof IColorTheme;
+    strokeColor?: keyof IColorTheme;
     strokeSize?: keyof typeof strokeSizeMapper;
 }

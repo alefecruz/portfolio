@@ -6,23 +6,23 @@ import { GlobalStyles } from '@/global/styles';
 import { selectTheme } from '@/global/theme';
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  const theme = selectTheme({
-    color: 'default',
-    font: 'montserrat',
-    size: 'default',
-    media: 'default',
-    spacing: 'default',
-  });
-  return (
-    <ThemeProvider theme={theme}>
-      <html lang="en">
-        <body>{children}</body>
-      </html>
-      <GlobalStyles />
-    </ThemeProvider>
-  );
+    const theme = selectTheme({
+        color: 'default',
+        font: 'montserrat',
+        size: 'default',
+        media: 'default',
+        spacing: 'default',
+    });
+    return (
+        <ThemeProvider theme={theme}>
+            <html lang="en">
+                <body>{children}</body>
+            </html>
+            <GlobalStyles />
+        </ThemeProvider>
+    );
 }

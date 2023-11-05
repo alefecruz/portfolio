@@ -7,7 +7,7 @@ import {
     ISpacingTheme,
 } from './interfaces';
 
-export interface ThemeType {
+export interface ITheme {
     COLORS: IColorTheme;
     FONTS: IFontTheme;
     SIZES: ISizeTheme;
@@ -16,5 +16,5 @@ export interface ThemeType {
 }
 
 declare module 'styled-components' {
-    export interface DefaultTheme extends ThemeType {}
+    export interface DefaultTheme extends ITheme {}
 }

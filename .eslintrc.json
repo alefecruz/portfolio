@@ -30,6 +30,12 @@
   "rules": {
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-    "prettier/prettier": "error"
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "import/no-anonymous-default-export": "off"
   }
 }

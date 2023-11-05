@@ -1,51 +1,53 @@
+import { CSSProp } from 'styled-components';
+
 import * as themeMapper from './mappers';
 export interface IColorTheme {
-    ACCENTED: string;
-    PRIMARY: string;
-    SECONDARY: string;
-    DISABLED: string;
-    DANGER: string;
+    ACCENTED: CSSProp;
+    PRIMARY: CSSProp;
+    SECONDARY: CSSProp;
+    DISABLED: CSSProp;
+    DANGER: CSSProp;
 
-    LIGHT: string;
-    DARK: string;
+    LIGHT: CSSProp;
+    DARK: CSSProp;
 }
 
 export interface IFontTheme {
-    THIN: string;
-    LIGHT: string;
-    REGULAR: string;
-    MEDIUM: string;
-    SEMI_BOLD: string;
-    BOLD: string;
+    THIN: CSSProp;
+    LIGHT: CSSProp;
+    REGULAR: CSSProp;
+    MEDIUM: CSSProp;
+    SEMI_BOLD: CSSProp;
+    BOLD: CSSProp;
 }
 
 export interface IMediaTheme {
-    LTE_SMALL: string;
-    LTE_MEDIUM: string;
-    LTE_LARGE: string;
+    LTE_SMALL: CSSProp;
+    LTE_MEDIUM: CSSProp;
+    LTE_LARGE: CSSProp;
 }
 
 export interface ISizeTheme {
-    XSMALL: string;
-    SMALL: string;
-    MEDIUM: string;
-    LARGE: string;
-    XLARGE: string;
-    XXLARGE: string;
-    HUGE: string;
-    XHUGE: string;
+    XSMALL: CSSProp;
+    SMALL: CSSProp;
+    MEDIUM: CSSProp;
+    LARGE: CSSProp;
+    XLARGE: CSSProp;
+    XXLARGE: CSSProp;
+    HUGE: CSSProp;
+    XHUGE: CSSProp;
 }
 
 export interface ISpacingTheme {
-    XXSMALL: string;
-    XSMALL: string;
-    SMALL: string;
-    MEDIUM: string;
-    LARGE: string;
-    XLARGE: string;
-    XXLARGE: string;
-    HUGE: string;
-    XHUGE: string;
+    XXSMALL: CSSProp;
+    XSMALL: CSSProp;
+    SMALL: CSSProp;
+    MEDIUM: CSSProp;
+    LARGE: CSSProp;
+    XLARGE: CSSProp;
+    XXLARGE: CSSProp;
+    HUGE: CSSProp;
+    XHUGE: CSSProp;
 }
 
 export interface ISelectTheme {

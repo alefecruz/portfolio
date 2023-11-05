@@ -1,10 +1,11 @@
 export * as themeMappers from './mappers';
-export type {
-    IColorTheme,
-    IFontTheme,
-    IMediaTheme,
-    ISelectTheme,
-    ISizeTheme,
-    ISpacingTheme,
+export {
+    type IColorTheme,
+    type IFontTheme,
+    type IMediaTheme,
+    type ISelectTheme,
+    type ISizeTheme,
+    type ISpacingTheme,
 } from './interfaces';
-export { selectTheme } from './selectTheme';
+
+export { selectTheme } from './select-theme';

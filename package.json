@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --check ./src"
+    "format": "prettier --check ./src",
+    "postinstall": "yarn husky install",
+    "gen:component": "npx plop --plopfile generators/components/plopfile.js"
   },
   "dependencies": {
     "next": "13.5.5",
@@ -32,6 +34,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.1",
+    "plop": "^4.0.0",
     "prettier": "^3.0.3",
     "styled-components": "^6.1.0",
     "typescript": "^5"

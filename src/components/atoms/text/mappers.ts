@@ -10,13 +10,21 @@ export const formatMepper = {
         font-size: ${({ theme }) => theme.SIZES.LARGE};
         text-transform: uppercase;
     `,
+    TITLE_3: css`
+        ${({ theme }) => theme.FONTS.BOLD};
+        font-size: ${({ theme }) => theme.SIZES.MEDIUM};
+        text-transform: uppercase;
+    `,
     SUBTITLE: css`
         ${({ theme }) => theme.FONTS.MEDIUM};
         font-size: ${({ theme }) => theme.SIZES.LARGE};
     `,
-
     BODY: css`
         ${({ theme }) => theme.FONTS.MEDIUM};
+        font-size: ${({ theme }) => theme.SIZES.MEDIUM};
+    `,
+    DESCRIPTION: css`
+        ${({ theme }) => theme.FONTS.REGULAR};
         font-size: ${({ theme }) => theme.SIZES.MEDIUM};
     `,
     BUTTON: css`

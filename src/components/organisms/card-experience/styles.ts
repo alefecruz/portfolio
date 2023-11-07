@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const ContentLeft = styled.div`
-    width: 40%;
+    min-width: ${({ theme }) => theme.SIZES.XXHUGE};
     margin-right: ${({ theme }) => theme.SPACINGS.SMALL};
     display: flex;
     flex-direction: column;

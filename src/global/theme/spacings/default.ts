@@ -1,6 +1,6 @@
-import { type SpacingFormat } from './interfaces';
+import { type ISpacingTheme } from '../interfaces';
 
-export const SPACINGS: SpacingFormat = {
+export const SPACINGS: ISpacingTheme = {
     XXSMALL: '1.2rem',
     XSMALL: '1.617rem',
     SMALL: '2.156rem',

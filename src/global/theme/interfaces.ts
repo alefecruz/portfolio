@@ -7,7 +7,6 @@ export interface IColorTheme {
     SECONDARY: CSSProp;
     DISABLED: CSSProp;
     DANGER: CSSProp;
-
     LIGHT: CSSProp;
     DARK: CSSProp;
 }
@@ -36,6 +35,7 @@ export interface ISizeTheme {
     XXLARGE: CSSProp;
     HUGE: CSSProp;
     XHUGE: CSSProp;
+    XXHUGE: CSSProp;
 }
 
 export interface ISpacingTheme {

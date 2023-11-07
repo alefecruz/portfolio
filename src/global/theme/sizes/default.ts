@@ -1,6 +1,6 @@
-import { type SizeFormat } from './interfaces';
+import { type ISizeTheme } from '../interfaces';
 
-export const SIZES: SizeFormat = {
+export const SIZES: ISizeTheme = {
     XSMALL: '1.1rem',
     SMALL: '1.617rem',
     MEDIUM: '2.4rem',
@@ -9,5 +9,5 @@ export const SIZES: SizeFormat = {
     XXLARGE: '6.4rem',
     HUGE: '10.06rem',
     XHUGE: '18.4rem',
-    XXHUGE: '28.8rem',
+    XXHUGE: '20.6rem',
 };

@@ -12,7 +12,7 @@ const AtomExample = ({
     ...rest
 }: ILinkProps): ReactElement => {
     return (
-        <S.LinkComponent href={navigate} onClick={onClick}>
+        <S.LinkComponent href={navigate} onClick={onClick} target="_Blanck">
             <Text {...rest} />
         </S.LinkComponent>
     );

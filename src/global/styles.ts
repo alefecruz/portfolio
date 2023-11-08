@@ -14,6 +14,16 @@ export const GlobalStyles = createGlobalStyle`
   src: url('/assets/fonts/Montserrat.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Mina-Bold';
+    src: url('/assets/fonts/mina/Mina-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mina-Regular';
+    src: url('/assets/fonts/mina/Mina-Regular.ttf') format('truetype');
+}
+
 html {
   font-size: 62.5%;
 }

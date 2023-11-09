@@ -4,12 +4,12 @@ import { formarMapper } from './mappers';
 import { RuleSet } from 'styled-components';
 
 export interface IButtonProps {
-    label: string;
+    label?: string;
     iconLeftName?: IIconProps['name'];
     format?: keyof typeof formarMapper;
     size?: keyof Pick<ISpacingTheme, 'XSMALL' | 'SMALL' | 'XXSMALL'>;
     isStretch?: boolean;
-    onPress: () => void;
+    onPress?: () => void;
 }
 
 export interface IFormatMapper {

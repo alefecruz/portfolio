@@ -29,11 +29,16 @@ const Button = ({
                     <Icon color={formarMapper[format].contentColor} />
                 </S.IconContent>
             )}
-            <S.LabelContent>
-                <Text format="BUTTON" color={formarMapper[format].contentColor}>
-                    {label}
-                </Text>
-            </S.LabelContent>
+            {label !== undefined && (
+                <S.LabelContent>
+                    <Text
+                        format="BUTTON"
+                        color={formarMapper[format].contentColor}
+                    >
+                        {label}
+                    </Text>
+                </S.LabelContent>
+            )}
         </S.ButtonComponent>
     );
 };

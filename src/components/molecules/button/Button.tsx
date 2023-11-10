@@ -26,7 +26,10 @@ const Button = ({
         >
             {iconLeftName !== undefined && (
                 <S.IconContent>
-                    <Icon color={formarMapper[format].contentColor} />
+                    <Icon
+                        name={iconLeftName}
+                        color={formarMapper[format].contentColor}
+                    />
                 </S.IconContent>
             )}
             {label !== undefined && (

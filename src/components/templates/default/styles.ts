@@ -7,6 +7,21 @@ export const ContentMyInfo = styled.div`
     width: 27%;
     background-color: ${({ theme }) => theme.COLORS.PRIMARY};
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: ${({ theme }) => theme.SPACINGS.LARGE};
+    justify-content: space-between;
+`;
+
+export const WrapperMyInfo = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: ${({ theme }) => theme.SPACINGS.XXSMALL};
+`;
+
+export const ContentSocialMedias = styled.div`
+    display: flex;
+    gap: ${({ theme }) => theme.SPACINGS.XSMALL};
 `;
 
 export const ContentAbout = styled.div`

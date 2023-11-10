@@ -7,8 +7,8 @@ import { Line } from '@/components/atoms/line';
 import { Link } from '@/components/molecules/link';
 
 const FIRST_OPTION_INDEX = 0;
-const WIDTH_UNSELECTED_OPTION = 6;
-const WIDTH_SELECTED_OPTION = 8;
+const WIDTH_UNSELECTED_OPTION = 8;
+const WIDTH_SELECTED_OPTION = 12;
 
 const Navbar = ({
     optionList = [],
@@ -40,7 +40,8 @@ const Navbar = ({
                         onClick={() => setSelectedIndex(index)}
                         navigate={navigate}
                         format="BUTTON"
-                        strokeColor={
+                        target="SELF"
+                        color={
                             selectedIndex === index
                                 ? optionSelectedColor
                                 : optionDontSelectedColor

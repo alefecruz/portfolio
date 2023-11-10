@@ -10,13 +10,14 @@ import { Text } from '@/components/atoms/text';
 import { Logo } from '@/components/molecules/logo';
 import { Button } from '@/components/molecules/button';
 import { Navbar } from '@/components/organisms/navbar';
+import { Image } from '@/components/atoms/image';
 
-const Default = ({ myInfo }: IDefaultProps): ReactElement => {
+const Default = ({ myInfo, aboutSection }: IDefaultProps): ReactElement => {
     const {
         logo,
         description,
         getInTouchButton,
-        navbarOptionList,
+        navbarOptionList = [],
         socialButtonList,
         subtitle,
         title,
@@ -30,6 +31,8 @@ const Default = ({ myInfo }: IDefaultProps): ReactElement => {
 
     const { label, onPress } = getInTouchButton || {};
 
+    const { myPicture, text } = aboutSection || {};
+
     return (
         <S.Container>
             <S.ContentMyInfo>
@@ -40,24 +43,49 @@ const Default = ({ myInfo }: IDefaultProps): ReactElement => {
                         description={logoDescription}
                     />
                 )}
-                <Text>{title}</Text>
-                <Text>{subtitle}</Text>
-                <Text>{description}</Text>
-                {socialButtonList.map(({ onPress, iconLeftName }, index) => (
-                    <Button
-                        key={index}
-                        iconLeftName={iconLeftName}
-                        onPress={onPress}
-                    />
-                ))}
+                <S.WrapperMyInfo>
+                    <Text format="TITLE_2" color="ACCENTED">
+                        {title}
+                    </Text>
+                    <Text format="BODY" color="LIGHT">
+                        {subtitle}
+                    </Text>
+                    <Text format="DESCRIPTION" color="LIGHT">
+                        {description}
+                    </Text>
+                    <S.ContentSocialMedias>
+                        {socialButtonList.map(
+                            ({ onPress, iconLeftName }, index) => (
+                                <Button
+                                    key={index}
+                                    iconLeftName={iconLeftName}
+                                    format="NONE_ACCENTED"
+                                    onPress={onPress}
+                                />
+                            ),
+                        )}
+                    </S.ContentSocialMedias>
+                </S.WrapperMyInfo>
                 <Navbar
                     optionList={navbarOptionList}
                     optionSelectedColor="ACCENTED"
                     optionDontSelectedColor="LIGHT"
                 />
-                <Button label={label} onPress={onPress} />
+                <Button
+                    label={label}
+                    onPress={onPress}
+                    format="FILLED_ACCENTED"
+                    iconLeftName="SETA"
+                />
             </S.ContentMyInfo>
-            <S.ContentAbout id="#about">ContentAbout</S.ContentAbout>
+            <S.ContentAbout id="about">
+                <Image
+                    source={myPicture.source}
+                    alt={myPicture.alt}
+                    sizeHeight={47}
+                    sizeWidth={47}
+                />
+            </S.ContentAbout>
             <S.ContentExperience id="experience">
                 ContentExperience
             </S.ContentExperience>

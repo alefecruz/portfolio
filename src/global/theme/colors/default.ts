@@ -1,8 +1,8 @@
 import { type IColorTheme } from '../interfaces';
 
 export const COLORS: IColorTheme = {
-    ACCENTED: '#41A152',
-    PRIMARY: '#4B4B4B',
+    ACCENTED: '#2D132C',
+    PRIMARY: '#C72C41',
     SECONDARY: '#E1E1E1',
     DISABLED: '#EAEAEA',
     DANGER: '#C9252D',

@@ -8,9 +8,10 @@ export const OptionContent = styled.li`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 1rem;
 
     a {
         text-decoration: none;
-        margin-left: 10px;
+        margin-left: 2.5rem;
     }
 `;

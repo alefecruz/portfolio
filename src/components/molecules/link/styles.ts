@@ -1,3 +1,5 @@
 import styled from 'styled-components';
 
-export const LinkComponent = styled.a``;
+export const LinkComponent = styled.a`
+    cursor: pointer;
+`;

@@ -26,21 +26,27 @@ export const ContentSocialMedias = styled.div`
 
 export const ContentAbout = styled.div`
     height: 100vh;
-    width: 100vw;
-    margin-left: 27%;
-    background-color: red;
+    float: right;
+    width: 73%;
+    padding: ${({ theme }) => theme.SPACINGS.LARGE}
+        ${({ theme }) => theme.SPACINGS.HUGE};
+    background-color: ${({ theme }) => theme.COLORS.ACCENTED};
 `;
 
 export const ContentExperience = styled.div`
     height: 100vh;
-    width: 100vw;
-    margin-left: 27%;
-    background-color: blue;
+    float: right;
+    width: 73%;
+    padding: ${({ theme }) => theme.SPACINGS.LARGE}
+        ${({ theme }) => theme.SPACINGS.HUGE};
+    background-color: ${({ theme }) => theme.COLORS.ACCENTED};
 `;
 
 export const ContentProject = styled.div`
     height: 100vh;
-    width: 100vw;
-    margin-left: 27%;
-    background-color: magenta;
+    float: right;
+    width: 73%;
+    padding: ${({ theme }) => theme.SPACINGS.LARGE}
+        ${({ theme }) => theme.SPACINGS.HUGE};
+    background-color: ${({ theme }) => theme.COLORS.ACCENTED};
 `;

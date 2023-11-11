@@ -19,7 +19,7 @@ const Navbar = ({
 
     return (
         <S.NavbarContainer>
-            {optionList.map(({ label, navigate }, index) => (
+            {optionList.map(({ label, onClick }, index) => (
                 <S.OptionContent key={index}>
                     <Line
                         width={
@@ -37,8 +37,10 @@ const Navbar = ({
                         }
                     />
                     <Link
-                        onClick={() => setSelectedIndex(index)}
-                        navigate={navigate}
+                        onClick={() => {
+                            setSelectedIndex(index);
+                            onClick !== undefined && onClick();
+                        }}
                         format="BUTTON"
                         target="SELF"
                         color={

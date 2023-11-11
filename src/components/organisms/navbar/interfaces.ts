@@ -13,6 +13,6 @@ export interface INavbarProps {
     >;
 }
 
-interface IOptionNavbar extends Pick<ILinkProps, 'navigate'> {
+interface IOptionNavbar extends Pick<ILinkProps, 'onClick'> {
     label: string;
 }

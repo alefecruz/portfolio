@@ -23,13 +23,19 @@ interface IMyInfo {
 }
 
 interface IAbout {
+    aboutTitle: string;
+    aboutRef: any;
     myPicture: Pick<IImageProps, 'source' | 'alt'>;
     text: string;
 }
 
 interface IExperience {
+    experienceTitle: string;
+    experienceRef: any;
     experienceList: ICardExperienceProps[];
 }
 interface IProject {
+    projectTitle: string;
+    projectRef: any;
     projectList: ICardProjectProps[];
 }

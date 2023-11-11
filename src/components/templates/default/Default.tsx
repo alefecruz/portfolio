@@ -11,8 +11,14 @@ import { Logo } from '@/components/molecules/logo';
 import { Button } from '@/components/molecules/button';
 import { Navbar } from '@/components/organisms/navbar';
 import { Image } from '@/components/atoms/image';
+import { SectionTitle } from '@/components/molecules/section-title';
 
-const Default = ({ myInfo, aboutSection }: IDefaultProps): ReactElement => {
+const Default = ({
+    myInfo,
+    aboutSection,
+    experienceSection,
+    projectSection,
+}: IDefaultProps): ReactElement => {
     const {
         logo,
         description,
@@ -31,7 +37,9 @@ const Default = ({ myInfo, aboutSection }: IDefaultProps): ReactElement => {
 
     const { label, onPress } = getInTouchButton || {};
 
-    const { myPicture, text } = aboutSection || {};
+    const { myPicture, aboutTitle, aboutRef } = aboutSection || {};
+    const { experienceRef, experienceTitle } = experienceSection || {};
+    const { projectRef, projectTitle } = projectSection || {};
 
     return (
         <S.Container>
@@ -78,7 +86,9 @@ const Default = ({ myInfo, aboutSection }: IDefaultProps): ReactElement => {
                     iconLeftName="SETA"
                 />
             </S.ContentMyInfo>
-            <S.ContentAbout id="about">
+            <S.ContentAbout id="about" ref={aboutRef}>
+                <SectionTitle title={aboutTitle} />
+
                 <Image
                     source={myPicture.source}
                     alt={myPicture.alt}
@@ -86,10 +96,12 @@ const Default = ({ myInfo, aboutSection }: IDefaultProps): ReactElement => {
                     sizeWidth={47}
                 />
             </S.ContentAbout>
-            <S.ContentExperience id="experience">
-                ContentExperience
+            <S.ContentExperience id="experience" ref={experienceRef}>
+                <SectionTitle title={experienceTitle} />
             </S.ContentExperience>
-            <S.ContentProject id="project">ContentProject</S.ContentProject>
+            <S.ContentProject id="project" ref={projectRef}>
+                <SectionTitle title={projectTitle} />
+            </S.ContentProject>
         </S.Container>
     );
 };

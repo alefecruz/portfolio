@@ -33,8 +33,19 @@ export const ContentAbout = styled.div`
     background-color: ${({ theme }) => theme.COLORS.ACCENTED};
 `;
 
+export const WrapperAbout = styled.div`
+    margin-top: ${({ theme }) => theme.SPACINGS.LARGE};
+    float: right;
+    justify-content: flex-start;
+    align-items: flex-start;
+    & img {
+        float: left;
+        margin: 0 ${({ theme }) => theme.SPACINGS.XLARGE}
+            ${({ theme }) => theme.SPACINGS.LARGE} 0;
+    }
+`;
+
 export const ContentExperience = styled.div`
-    height: 100vh;
     float: right;
     width: 73%;
     padding: ${({ theme }) => theme.SPACINGS.LARGE}
@@ -42,11 +53,18 @@ export const ContentExperience = styled.div`
     background-color: ${({ theme }) => theme.COLORS.ACCENTED};
 `;
 
+export const WrapperExperience = styled.div`
+    margin-top: ${({ theme }) => theme.SPACINGS.LARGE};
+`;
+
 export const ContentProject = styled.div`
-    height: 100vh;
     float: right;
     width: 73%;
     padding: ${({ theme }) => theme.SPACINGS.LARGE}
         ${({ theme }) => theme.SPACINGS.HUGE};
     background-color: ${({ theme }) => theme.COLORS.ACCENTED};
+`;
+
+export const WrapperProject = styled.div`
+    margin-top: ${({ theme }) => theme.SPACINGS.LARGE};
 `;

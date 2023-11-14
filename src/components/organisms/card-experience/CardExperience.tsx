@@ -24,20 +24,20 @@ const CardExperience = ({
                 {period}
             </Text>
             <S.ContentIcon>
-                <Icon name={iconName} size="HUGE" color="ACCENTED" />
+                <Icon name={iconName} size="HUGE" color="PRIMARY" />
             </S.ContentIcon>
         </S.ContentLeft>
         <S.ContentRight>
-            <Text format="TITLE_3" color="PRIMARY">
+            <Text format="TITLE_3" color="DARK">
                 {title}
             </Text>
             <S.ContentSubtitle>
-                <Text format="BODY" color="PRIMARY">
+                <Text format="BODY" color="DARK">
                     {subtitle}
                 </Text>
             </S.ContentSubtitle>
             <S.ContentDescription>
-                <Text format="DESCRIPTION" color="PRIMARY">
+                <Text format="DESCRIPTION" color="DARK">
                     {description}
                 </Text>
             </S.ContentDescription>

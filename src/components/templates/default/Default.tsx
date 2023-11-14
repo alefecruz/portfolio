@@ -12,6 +12,8 @@ import { Button } from '@/components/molecules/button';
 import { Navbar } from '@/components/organisms/navbar';
 import { Image } from '@/components/atoms/image';
 import { SectionTitle } from '@/components/molecules/section-title';
+import { CardExperience } from '@/components/organisms/card-experience';
+import { CardProject } from '@/components/organisms/card-project';
 
 const Default = ({
     myInfo,
@@ -37,9 +39,13 @@ const Default = ({
 
     const { label, onPress } = getInTouchButton || {};
 
-    const { myPicture, aboutTitle, aboutRef } = aboutSection || {};
-    const { experienceRef, experienceTitle } = experienceSection || {};
-    const { projectRef, projectTitle } = projectSection || {};
+    const { myPicture, aboutTitle, aboutRef, text } = aboutSection || {};
+    const {
+        experienceRef,
+        experienceTitle,
+        experienceList = [],
+    } = experienceSection || {};
+    const { projectRef, projectTitle, projectList = [] } = projectSection || {};
 
     return (
         <S.Container>
@@ -88,19 +94,33 @@ const Default = ({
             </S.ContentMyInfo>
             <S.ContentAbout id="about" ref={aboutRef}>
                 <SectionTitle title={aboutTitle} />
-
-                <Image
-                    source={myPicture.source}
-                    alt={myPicture.alt}
-                    sizeHeight={47}
-                    sizeWidth={47}
-                />
+                <S.WrapperAbout>
+                    <Image
+                        source={myPicture.source}
+                        alt={myPicture.alt}
+                        sizeHeight={47}
+                        sizeWidth={47}
+                    />
+                    <Text format="DESCRIPTION" color="LIGHT">
+                        {text}
+                    </Text>
+                </S.WrapperAbout>
             </S.ContentAbout>
             <S.ContentExperience id="experience" ref={experienceRef}>
                 <SectionTitle title={experienceTitle} />
+                <S.WrapperExperience>
+                    {experienceList.map((experienceProps, index) => (
+                        <CardExperience key={index} {...experienceProps} />
+                    ))}
+                </S.WrapperExperience>
             </S.ContentExperience>
             <S.ContentProject id="project" ref={projectRef}>
                 <SectionTitle title={projectTitle} />
+                <S.WrapperProject>
+                    {projectList.map((projectCardProps, index) => (
+                        <CardProject key={index} {...projectCardProps} />
+                    ))}
+                </S.WrapperProject>
             </S.ContentProject>
         </S.Container>
     );

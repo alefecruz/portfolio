@@ -9,6 +9,23 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
+
+&::-webkit-scrollbar {
+    width: ${({ theme }) => theme.SIZES.XSMALL}
+}
+
+&::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.COLORS.ACCENTED};
+}
+
+&::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.COLORS.PRIMARY};
+}
+
+&::-webkit-scrollbar-thumb:hover {
+    background: ${({ theme }) => theme.COLORS.ACCENTED};
+}
+
 @font-face {
   font-family: 'Montserrat';
   src: url('/assets/fonts/Montserrat.ttf') format('truetype');
@@ -27,6 +44,8 @@ export const GlobalStyles = createGlobalStyle`
 html {
   font-size: 62.5%;
 }
+
+
 
 body {
   background-color: hsl(0, 0%, 100%);

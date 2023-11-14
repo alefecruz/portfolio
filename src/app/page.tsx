@@ -73,15 +73,91 @@ export default function App() {
                     source: 'https://avatars.githubusercontent.com/u/126995086?v=4',
                     alt: 'Minha imagem',
                 },
-                text: 'Cras maximus nibh ac accumsan ultrices. Aliquam auctor dolor leo, vel convallis neque iaculis quis. Aenean eget varius quam. Donec faucibus interdum nibh, et suscipit ante porta in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.                Vestibulum laoreet lacus et ornare venenatis. Integer finibus dui ac odio dapibus, in feugiat urna molestie. Vestibulum pretium eros risus, quis bibendum purus vehicula non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum finibus metus, non lacinia nulla tincidunt in. Vestibulum laoreet lacus et ornare venenatis. Integer finibus dui ac odio dapibus, in feugiat urna molestie. Vestibulum pretium eros risus, quis bibendum purus vehicula non. Aenean fringilla, felis eget sagittis convallis, ex justo vestibulum dui, vitae rutrum purus nisl vitae urna. Morbi cursus mi quis tortor rutrum, vel aliquet ante gravida. Aenean at hendrerit lorem',
+                text: (
+                    <>
+                        <p>
+                            Cras maximus nibh ac accumsan ultrices. Aliquam
+                            auctor dolor leo, vel convallis neque iaculis quis.
+                            Aenean eget varius quam. Donec faucibus interdum
+                            nibh, et suscipit ante porta in. Vestibulum ante
+                            ipsum primis in faucibus orci luctus et ultrices
+                            posuere cubilia curae.
+                        </p>
+                        <br />
+                        <p>
+                            Vestibulum laoreet lacus et ornare venenatis.
+                            Integer finibus dui ac odio dapibus, in feugiat urna
+                            molestie. Vestibulum pretium eros risus, quis
+                            bibendum purus vehicula non.
+                        </p>
+                        <br />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Aenean dictum finibus metus, non lacinia nulla
+                            tincidunt in. Vestibulum laoreet lacus et ornare
+                            venenatis. Integer finibus dui ac odio dapibus, quis
+                            bibendum purus vehicula non.
+                        </p>
+                    </>
+                ),
             }}
             experienceSection={{
                 experienceTitle: 'Experiência',
                 experienceRef,
+                experienceList: [
+                    {
+                        title: 'XPTO',
+                        subtitle: 'Dev. Junior I',
+                        iconName: 'DEVOT',
+                        description:
+                            'Cras maximus nibh ac accumsan ultrices. Aliquam auctor dolor leo, vel convallis neque iaculis quis. Aenean eget varius quam. Donec faucibus interdum nibh, et suscipit ante porta in. Aenean eget varius quam. Donec faucibus interdum nibh, et suscipit ante porta in.',
+                        period: '1999 - 2001',
+                        tagList: ['Java', 'C', 'MySQL'],
+                    },
+                    {
+                        title: 'XPTO',
+                        subtitle: 'Dev. Junior I',
+                        iconName: 'DEVOT',
+                        description:
+                            'Cras maximus nibh ac accumsan ultrices. Aliquam auctor dolor leo, vel convallis neque iaculis quis. Aenean eget varius quam. Donec faucibus interdum nibh, et suscipit ante porta in. Aenean eget varius quam. Donec faucibus interdum nibh, et suscipit ante porta in.',
+                        period: '1999 - 2001',
+                        tagList: ['Java', 'C', 'MySQL'],
+                    },
+                ],
             }}
             projectSection={{
                 projectTitle: 'Projetos',
                 projectRef,
+                projectList: [
+                    {
+                        title: 'XPTO',
+                        description:
+                            'Cras maximus nibh ac accumsan ultrices. Aliquam auctor dolor leo, vel convallis neque iaculis quis. Aenean eget varius quam. Donec faucibus interdum nibh, et suscipit ante porta in. Aenean eget varius quam. Donec faucibus interdum nibh, et suscipit ante porta in.',
+                        tagList: ['Java', 'C', 'MySQL'],
+                        projectImage: {
+                            source: 'https://img.freepik.com/free-vector/gradient-grainy-texture_23-2148981502.jpg?w=826&t=st=1699919827~exp=1699920427~hmac=8b16a5044212058e0072313a35251d29039d9f1aadf6075ab9772e017b8ad44a',
+                            alt: 'sei la',
+                        },
+                        accessLink: {
+                            label: 'Ver mais',
+                            navigate: 'http://www.google.com',
+                        },
+                    },
+                    {
+                        title: 'XPTO',
+                        description:
+                            'Cras maximus nibh ac accumsan ultrices. Aliquam auctor dolor leo, vel convallis neque iaculis quis. Aenean eget varius quam. Donec faucibus interdum nibh, et suscipit ante porta in. Aenean eget varius quam. Donec faucibus interdum nibh, et suscipit ante porta in.',
+                        tagList: ['Java', 'C', 'MySQL'],
+                        projectImage: {
+                            source: 'https://img.freepik.com/free-vector/gradient-grainy-texture_23-2148981502.jpg?w=826&t=st=1699919827~exp=1699920427~hmac=8b16a5044212058e0072313a35251d29039d9f1aadf6075ab9772e017b8ad44a',
+                            alt: 'sei la',
+                        },
+                        accessLink: {
+                            label: 'Ver mais',
+                            navigate: 'http://www.google.com',
+                        },
+                    },
+                ],
             }}
         />
     );

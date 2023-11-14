@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
-    border: 6px solid ${({ theme }) => theme.COLORS.ACCENTED};
+    border: 6px solid ${({ theme }) => theme.COLORS.PRIMARY};
     padding: ${({ theme }) => theme.SPACINGS.MEDIUM};
     margin: ${({ theme }) => theme.SPACINGS.MEDIUM};
+    background-color: ${({ theme }) => theme.COLORS.LIGHT};
 `;
 
 export const ContentLeft = styled.div`

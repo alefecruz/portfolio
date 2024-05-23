@@ -28,6 +28,7 @@ const Button = ({
                 <S.IconContent>
                     <Icon
                         name={iconLeftName}
+                        size={size}
                         color={formarMapper[format].contentColor}
                     />
                 </S.IconContent>

@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 import { formarMapper } from './mappers';
-import { IButtonProps } from './interfaces';
+import { IButtonContent } from './interfaces';
 import { css } from 'styled-components';
 
-export const ButtonComponent = styled.button<Omit<IButtonProps, 'label'>>`
+export const ButtonComponent = styled.button<IButtonContent>`
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
-    padding: ${({ size, theme }) =>
-        size === undefined ? theme.SPACINGS.XSMALL : theme.SPACINGS[size]};
+
     ${({ format }) =>
         format === undefined
             ? formarMapper.FILLED_ACCENTED.box
@@ -20,8 +19,11 @@ export const ButtonComponent = styled.button<Omit<IButtonProps, 'label'>>`
         css`
             width: 100%;
         `};
+
+    transition: 0.3s ease transform;
+
     &:hover {
-        opacity: 0.8;
+        transform: scale(1.1);
     }
 `;
 

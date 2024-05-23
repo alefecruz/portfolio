@@ -20,14 +20,11 @@ const CardProject = ({
     accessLink,
 }: ICardProjectProps): ReactElement => (
     <S.Container>
-        <S.ContentLeft>
-            <Image
-                source={projectImage?.source}
-                alt={projectImage?.alt}
-                sizeHeight={30}
-                sizeWidth={33.5}
-            />
-        </S.ContentLeft>
+        {projectImage && (
+            <S.ContentLeft>
+                <Image source={projectImage?.source} alt={projectImage?.alt} />
+            </S.ContentLeft>
+        )}
         <S.ContentRight>
             <S.ContentTitle>
                 <Text format="TITLE_3" color="PRIMARY">
@@ -42,7 +39,7 @@ const CardProject = ({
             </Text>
             <S.ContentTag>
                 {tagList.map((tagName, index) => (
-                    <Tag key={index} label={tagName} />
+                    <Tag key={index} label={tagName} color="SECONDARY" />
                 ))}
             </S.ContentTag>
         </S.ContentRight>

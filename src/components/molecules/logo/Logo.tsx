@@ -8,12 +8,11 @@ import { Icon } from '@/components/atoms/icon';
 
 import { ILogoProps } from './interfaces';
 
-const Logo = ({ description, iconName, title }: ILogoProps): ReactElement => (
+const Logo = ({ iconName, title }: ILogoProps): ReactElement => (
     <S.Container>
-        <Icon name={iconName} color="ACCENTED" size="HUGE" />
+        <Icon name={iconName} color="ACCENTED" size="XLARGE" />
         <S.ContentLogoInfo>
             <S.Title>{title}</S.Title>
-            <S.Description>{description}</S.Description>
         </S.ContentLogoInfo>
     </S.Container>
 );

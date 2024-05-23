@@ -8,7 +8,7 @@ import { IIconProps } from './interfaces';
 const Icon = ({ name, ...rest }: IIconProps): ReactElement => {
     return (
         <S.IconComponent
-            src={name === undefined ? nameMapper.DEVOT : nameMapper[name]}
+            src={name ? nameMapper[name] : nameMapper.DEVOT}
             {...rest}
         />
     );

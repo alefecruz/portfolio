@@ -3,38 +3,42 @@ import { css } from 'styled-components';
 export const formatMepper = {
     TITLE_1: css`
         ${({ theme }) => theme.FONTS.BOLD};
-        font-size: ${({ theme }) => theme.SIZES.XLARGE};
+        font-size: ${({ theme }) => theme.SIZES.LARGE};
     `,
     TITLE_2: css`
         ${({ theme }) => theme.FONTS.MEDIUM};
-        font-size: ${({ theme }) => theme.SIZES.LARGE};
-        text-transform: uppercase;
+        font-size: ${({ theme }) => theme.SIZES.MEDIUM};
     `,
     TITLE_3: css`
         ${({ theme }) => theme.FONTS.BOLD};
-        font-size: ${({ theme }) => theme.SIZES.MEDIUM};
+        font-size: ${({ theme }) => theme.SIZES.SMALL};
         text-transform: uppercase;
     `,
     SUBTITLE: css`
         ${({ theme }) => theme.FONTS.MEDIUM};
-        font-size: ${({ theme }) => theme.SIZES.LARGE};
+        font-size: ${({ theme }) => theme.SIZES.MEDIUM};
     `,
     BODY: css`
         ${({ theme }) => theme.FONTS.MEDIUM};
-        font-size: ${({ theme }) => theme.SIZES.MEDIUM};
+        font-size: ${({ theme }) => theme.SIZES.XSMALL};
     `,
     DESCRIPTION: css`
         ${({ theme }) => theme.FONTS.REGULAR};
-        font-size: ${({ theme }) => theme.SIZES.MEDIUM};
+        font-size: ${({ theme }) => theme.SIZES.SMALL};
     `,
     BUTTON: css`
         ${({ theme }) => theme.FONTS.MEDIUM};
-        font-size: ${({ theme }) => theme.SIZES.SMALL};
+        font-size: ${({ theme }) => theme.SIZES.XSMALL};
         text-transform: uppercase;
     `,
     TAG: css`
         ${({ theme }) => theme.FONTS.MEDIUM};
+        font-size: ${({ theme }) => theme.SIZES.XSMALL};
+    `,
+    LINK: css`
+        ${({ theme }) => theme.FONTS.MEDIUM};
         font-size: ${({ theme }) => theme.SIZES.SMALL};
+        text-decoration: underline;
     `,
 };
 

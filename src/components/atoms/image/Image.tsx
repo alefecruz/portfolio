@@ -6,8 +6,8 @@ import { IImageProps } from './interfaces';
 
 const Image = ({
     source = '/assets/images/default.png',
-    sizeHeight = 30,
-    sizeWidth = 30,
+    sizeHeight,
+    sizeWidth,
     alt,
 }: IImageProps): ReactElement => {
     return (

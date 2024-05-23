@@ -11,17 +11,21 @@ export const ContentMyInfo = styled.div`
     flex-direction: column;
     padding: ${({ theme }) => theme.SPACINGS.LARGE};
     justify-content: space-between;
+    box-shadow: 10px 10px 10px -1px #000000;
 `;
 
 export const WrapperMyInfo = styled.div`
+    width: 100%;
     display: flex;
+    gap: ${({ theme }) => theme.SPACINGS.SMALL};
+
     flex-direction: column;
-    gap: ${({ theme }) => theme.SPACINGS.XXSMALL};
 `;
 
 export const ContentSocialMedias = styled.div`
+    width: 100%;
     display: flex;
-    gap: ${({ theme }) => theme.SPACINGS.XSMALL};
+    justify-content: space-between;
 `;
 
 export const ContentAbout = styled.div`
@@ -33,13 +37,19 @@ export const ContentAbout = styled.div`
     background-color: ${({ theme }) => theme.COLORS.ACCENTED};
 `;
 
+export const ContentScrollDown = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
 export const WrapperAbout = styled.div`
     margin-top: ${({ theme }) => theme.SPACINGS.LARGE};
-    float: right;
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     & img {
-        float: left;
         margin: 0 ${({ theme }) => theme.SPACINGS.XLARGE}
             ${({ theme }) => theme.SPACINGS.LARGE} 0;
     }

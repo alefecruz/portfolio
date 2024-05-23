@@ -5,6 +5,7 @@ export interface IColorTheme {
     ACCENTED: CSSProp;
     PRIMARY: CSSProp;
     SECONDARY: CSSProp;
+    TERNARY: CSSProp;
     DISABLED: CSSProp;
     DANGER: CSSProp;
     LIGHT: CSSProp;

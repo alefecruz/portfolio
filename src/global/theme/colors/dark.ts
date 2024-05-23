@@ -4,6 +4,7 @@ export const COLORS: IColorTheme = {
     ACCENTED: '#FFFFFF',
     PRIMARY: '#000000',
     SECONDARY: '#000000',
+    TERNARY: '#000000',
 
     DISABLED: '#FFFFFF',
 

@@ -5,6 +5,8 @@ export const COLORS: IColorTheme = {
     DISABLED: '#FFFFFF',
     PRIMARY: '#FFFFFF',
     SECONDARY: '#FFFFFF',
+    TERNARY: '#000000',
+
     LIGHT: '#FFFFFF',
     DARK: '#FFFFFF',
     DANGER: '#000000',

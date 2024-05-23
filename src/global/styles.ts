@@ -11,7 +11,8 @@ export const GlobalStyles = createGlobalStyle`
 
 
 &::-webkit-scrollbar {
-    width: ${({ theme }) => theme.SIZES.XSMALL}
+    width:  0.5rem;
+    
 }
 
 &::-webkit-scrollbar-track {
@@ -23,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 &::-webkit-scrollbar-thumb:hover {
-    background: ${({ theme }) => theme.COLORS.ACCENTED};
+    background: ${({ theme }) => theme.COLORS.TERNARY};
 }
 
 @font-face {
@@ -48,8 +49,8 @@ html {
 
 
 body {
-  background-color: hsl(0, 0%, 100%);
   color: hsl(0, 1%, 16%);
   overflow-x: hidden;
+  background-color: ${({ theme }) => theme.COLORS.ACCENTED};
 }
 `;

@@ -19,7 +19,7 @@ const AtomExample = ({
             onClick={onClick}
             target={targetMapper[target]}
         >
-            <Text {...rest} />
+            <Text color="SECONDARY" {...rest} format="LINK" />
         </S.LinkComponent>
     );
 };

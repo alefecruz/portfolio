@@ -7,12 +7,10 @@ import * as S from './styles';
 import { ICardExperienceProps } from './interfaces';
 
 import { Text } from '@/components/atoms/text';
-import { Icon } from '@/components/atoms/icon';
 import { Tag } from '@/components/molecules/tag';
 
 const CardExperience = ({
     period,
-    iconName,
     title,
     subtitle,
     description,
@@ -20,29 +18,26 @@ const CardExperience = ({
 }: ICardExperienceProps): ReactElement => (
     <S.Container>
         <S.ContentLeft>
-            <Text format="BODY" color="ACCENTED" letterCase="UPPER_CASE">
-                {period}
-            </Text>
-            <S.ContentIcon>
-                <Icon name={iconName} size="HUGE" color="PRIMARY" />
-            </S.ContentIcon>
-        </S.ContentLeft>
-        <S.ContentRight>
-            <Text format="TITLE_3" color="DARK">
+            <Text format="TITLE_3" color="PRIMARY">
                 {title}
             </Text>
+            <Text format="BODY" color="PRIMARY" letterCase="UPPER_CASE">
+                {period}
+            </Text>
             <S.ContentSubtitle>
-                <Text format="BODY" color="DARK">
+                <Text format="DESCRIPTION" color="PRIMARY">
                     {subtitle}
                 </Text>
             </S.ContentSubtitle>
             <S.ContentDescription>
-                <Text format="DESCRIPTION" color="DARK">
+                <Text format="DESCRIPTION" color="PRIMARY">
                     {description}
                 </Text>
             </S.ContentDescription>
+        </S.ContentLeft>
+        <S.ContentRight>
             {tagList.map((label, index) => (
-                <Tag key={index} label={label} />
+                <Tag key={index} label={label} color="SECONDARY" />
             ))}
         </S.ContentRight>
     </S.Container>

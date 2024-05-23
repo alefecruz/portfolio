@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { StyledComponentsRegistry } from '../lib/style';
 
 import { GlobalStyles } from '@/global/styles';
 import { selectTheme } from '@/global/theme';
@@ -18,11 +19,13 @@ export default function RootLayout({
         spacing: 'default',
     });
     return (
-        <ThemeProvider theme={theme}>
-            <html lang="en">
-                <body>{children}</body>
-            </html>
-            <GlobalStyles />
-        </ThemeProvider>
+        <StyledComponentsRegistry>
+            <ThemeProvider theme={theme}>
+                <html lang="en">
+                    <body>{children}</body>
+                </html>
+                <GlobalStyles />
+            </ThemeProvider>
+        </StyledComponentsRegistry>
     );
 }

@@ -8,6 +8,9 @@ import { IDefaultProps } from './interfaces';
 
 import { Text } from '@/components/atoms/text';
 import { Logo } from '@/components/molecules/logo';
+import { Down } from '@/components/molecules/down';
+import { SelectLenguage } from '@/components/molecules/select-lenguage';
+
 import { Button } from '@/components/molecules/button';
 import { Navbar } from '@/components/organisms/navbar';
 import { Image } from '@/components/atoms/image';
@@ -25,21 +28,20 @@ const Default = ({
         logo,
         description,
         getInTouchButton,
+        resumeButton,
         navbarOptionList = [],
         socialButtonList,
-        subtitle,
         title,
     } = myInfo || {};
 
-    const {
-        title: logoTitle,
-        iconName: iconLogoName,
-        description: logoDescription,
-    } = logo || {};
+    const { title: logoTitle, iconName: iconLogoName } = logo || {};
 
-    const { label, onPress } = getInTouchButton || {};
+    const { label: lebalGetInTouch, onPress: onPressGetInTouch } =
+        getInTouchButton || {};
+    const { label: lebalResume, onPress: onPressResume } = resumeButton || {};
 
-    const { myPicture, aboutTitle, aboutRef, text } = aboutSection || {};
+    const { myPicture, aboutTitle, aboutRef, paragraphs, scrollDown } =
+        aboutSection || {};
     const {
         experienceRef,
         experienceTitle,
@@ -50,21 +52,15 @@ const Default = ({
     return (
         <S.Container>
             <S.ContentMyInfo>
-                {logoTitle && iconLogoName && logoDescription && (
-                    <Logo
-                        iconName={iconLogoName}
-                        title={logoTitle}
-                        description={logoDescription}
-                    />
+                {logoTitle && iconLogoName && (
+                    <Logo iconName={iconLogoName} title={logoTitle} />
                 )}
+                <SelectLenguage onSelect={(value) => console.log(value)} />
                 <S.WrapperMyInfo>
                     <Text format="TITLE_2" color="ACCENTED">
                         {title}
                     </Text>
-                    <Text format="BODY" color="LIGHT">
-                        {subtitle}
-                    </Text>
-                    <Text format="DESCRIPTION" color="LIGHT">
+                    <Text format="BODY" color="TERNARY">
                         {description}
                     </Text>
                     <S.ContentSocialMedias>
@@ -72,6 +68,7 @@ const Default = ({
                             ({ onPress, iconLeftName }, index) => (
                                 <Button
                                     key={index}
+                                    size="LARGE"
                                     iconLeftName={iconLeftName}
                                     format="NONE_ACCENTED"
                                     onPress={onPress}
@@ -80,31 +77,39 @@ const Default = ({
                         )}
                     </S.ContentSocialMedias>
                 </S.WrapperMyInfo>
+                <Button
+                    size="SMALL"
+                    label={lebalResume}
+                    onPress={onPressResume}
+                    format="OUTLINE_ACCENTED"
+                />
                 <Navbar
                     optionList={navbarOptionList}
-                    optionSelectedColor="ACCENTED"
-                    optionDontSelectedColor="LIGHT"
+                    optionSelectedColor="SECONDARY"
+                    optionDontSelectedColor="ACCENTED"
                 />
                 <Button
-                    label={label}
-                    onPress={onPress}
+                    size="SMALL"
+                    label={lebalGetInTouch}
+                    onPress={onPressGetInTouch}
                     format="FILLED_ACCENTED"
-                    iconLeftName="SETA"
                 />
             </S.ContentMyInfo>
             <S.ContentAbout id="about" ref={aboutRef}>
                 <SectionTitle title={aboutTitle} />
                 <S.WrapperAbout>
-                    <Image
-                        source={myPicture.source}
-                        alt={myPicture.alt}
-                        sizeHeight={47}
-                        sizeWidth={47}
-                    />
-                    <Text format="DESCRIPTION" color="LIGHT">
-                        {text}
-                    </Text>
+                    <Image source={myPicture.source} alt={myPicture.alt} />
+                    {paragraphs.map((paragraph, index) => (
+                        <Text key={index} format="DESCRIPTION" color="LIGHT">
+                            {paragraph}
+                        </Text>
+                    ))}
                 </S.WrapperAbout>
+                {scrollDown && (
+                    <S.ContentScrollDown>
+                        <Down message={scrollDown} />
+                    </S.ContentScrollDown>
+                )}
             </S.ContentAbout>
             <S.ContentExperience id="experience" ref={experienceRef}>
                 <SectionTitle title={experienceTitle} />
@@ -117,9 +122,10 @@ const Default = ({
             <S.ContentProject id="project" ref={projectRef}>
                 <SectionTitle title={projectTitle} />
                 <S.WrapperProject>
-                    {projectList.map((projectCardProps, index) => (
-                        <CardProject key={index} {...projectCardProps} />
-                    ))}
+                    {projectList &&
+                        projectList.map((projectCardProps, index) => (
+                            <CardProject key={index} {...projectCardProps} />
+                        ))}
                 </S.WrapperProject>
             </S.ContentProject>
         </S.Container>

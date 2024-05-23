@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ITextProps } from './interfaces';
 import { formatMepper, letterCaseMapper } from './mappers';
 
-export const TextComponent = styled.p<ITextProps>`
+export const TextComponent = styled.div<ITextProps>`
     color: ${({ theme, color }) =>
         color === undefined ? theme.COLORS.PRIMARY : theme.COLORS[color]};
     ${({ letterCase }) =>

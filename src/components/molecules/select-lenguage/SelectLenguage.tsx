@@ -6,6 +6,7 @@ import * as S from './styles';
 
 import { ISelectLenguageProps, IIdioma } from './interfaces';
 import { Button, IButtonProps } from '@/components/molecules/button';
+import { Icon, IIconProps } from '@/components/atoms/icon';
 
 const SelectLenguage = ({ onSelect }: ISelectLenguageProps): ReactElement => {
     const [toggle, setToggle] = useState(false);
@@ -28,6 +29,11 @@ const SelectLenguage = ({ onSelect }: ISelectLenguageProps): ReactElement => {
                 iconLeftName={mapperIcon[selected]}
                 onPress={() => setToggle((curr) => !curr)}
             />
+            <Icon name="CHEVRON_DOWN" color="DARK" />
+            <Icon name="CHEVRON_UP" color="DARK" />
+            <Icon name="GLOBAL" color="DARK" />
+            <Icon name="MOON" color="DARK" />
+            <Icon name="SUN" color="DARK" />
             {toggle && (
                 <S.SelectFlag>
                     <Button

@@ -9,4 +9,9 @@ export const nameMapper = {
     MOUSE: '/assets/icons/mouse.svg',
     FLAG_BR: '/assets/icons/flag-br.svg',
     FLAG_US: '/assets/icons/flag-us.svg',
+    CHEVRON_UP: '/assets/icons/chevron-up.svg',
+    CHEVRON_DOWN: '/assets/icons/chevron-down.svg',
+    GLOBAL: '/assets/icons/global.svg',
+    MOON: '/assets/icons/moon.svg',
+    SUN: '/assets/icons/sun.svg',
 };

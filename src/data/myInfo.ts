@@ -35,7 +35,7 @@ export const myInfo: IMyInfoData = {
         },
         resumeButton: {
             label: 'Curriculo',
-            link: '/assets/images/default.png',
+            link: '/assets/files/CVPTBR.pdf',
         },
     },
     EN_US: {
@@ -53,7 +53,7 @@ export const myInfo: IMyInfoData = {
         },
         resumeButton: {
             label: 'Resume',
-            link: '/assets/images/default.png',
+            link: '/assets/files/CVENUS.pdf',
         },
     },
 };

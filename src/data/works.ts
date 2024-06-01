@@ -9,12 +9,12 @@ export const works: IWorksData = {
                 subtitle: 'Tech lead | Development Mobile Senior',
                 description:
                     'Liderança de time e construção de aplicação voltado para assistência e gerenciamento de Homecare. Realizando desenvolvimento, builds, testes e manutenção de aplicativo focado em IOS e backend API, atuando em design de features e de arquitetura do sistema, além de refatoração e injeção de ferramentas de padronização para melhor experiencia do desenvolvimento.',
-                period: 'mar 2021 - moment',
+                period: 'mar 2021 - atual',
                 tagList: ['React Native IOS', 'NodeJs', 'ReactJS', 'MySQL'],
             },
             {
                 title: 'Salvus',
-                subtitle: 'Development',
+                subtitle: 'Desenvolvedor Pleno',
                 description:
                     'Construção de aplicação voltado para assistência e gerenciamento de Homecare. Realizando desenvolvimento, builds, testes e manutenção em aplicativo Android, backend API e Sistema WEB.',
                 period: 'jun 2020 - mar 2021',
@@ -22,7 +22,7 @@ export const works: IWorksData = {
             },
             {
                 title: 'Segsat',
-                subtitle: 'Support analyst',
+                subtitle: 'Analista de suporte',
                 description:
                     'Continuei exercendo suporte no sistema GBUS, mas foquei em atividades de desenvolvimento e prototipação. Como desenvolvedor, implementei e corrigir bugs em aplicações backend em Java e em Node.js, utilizando banco de dados SQL Oracle e MongoDB. Como frontend, desenvolvi mudanças de layout em sistemas web',
                 period: 'jun 2019 - dez 2019',
@@ -30,9 +30,9 @@ export const works: IWorksData = {
             },
             {
                 title: 'Segsat',
-                subtitle: 'Engineering intern',
+                subtitle: 'Estágiário em engenharia',
                 description:
-                    'Tornei-me especialista no software GBUS, sistema de gestão de frota. Durante o período mantive contato direto com o cliente, realizando treinamento e acompanhando os primeiros passos do uso da ferramenta, levantando requisitos para ajustes e novas funcionalidades',
+                    'Tornei-me especialista no software GBUS, sistema de gestão de frota. Durante o período mantive contato direto com o cliente, realizando treinamento e acompanhando os primeiros passos do uso da ferramenta, levantando requisitos para ajustes ou novas funcionalidades e configurando restreadores veicular',
                 period: 'abr 2018 - jun 2019',
                 tagList: ['HTML', 'CSS', 'JS', 'AngularJS'],
             },

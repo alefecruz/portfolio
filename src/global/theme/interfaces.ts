@@ -25,6 +25,7 @@ export interface IMediaTheme {
     LTE_SMALL: CSSProp;
     LTE_MEDIUM: CSSProp;
     LTE_LARGE: CSSProp;
+    LTE_XLARGE: CSSProp;
 }
 
 export interface ISizeTheme {

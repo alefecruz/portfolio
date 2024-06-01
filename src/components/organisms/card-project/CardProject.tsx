@@ -19,7 +19,7 @@ const CardProject = ({
     tagList = [],
     accessLink,
 }: ICardProjectProps): ReactElement => (
-    <S.Container>
+    <S.CardComponent>
         {projectImage && (
             <S.ContentLeft>
                 <Image source={projectImage?.source} alt={projectImage?.alt} />
@@ -30,9 +30,6 @@ const CardProject = ({
                 <Text format="TITLE_3" color="PRIMARY">
                     {title}
                 </Text>
-                <Link format="DESCRIPTION" navigate={accessLink?.navigate}>
-                    {accessLink?.label} +
-                </Link>
             </S.ContentTitle>
             <Text format="DESCRIPTION" color="PRIMARY">
                 {description}
@@ -42,8 +39,13 @@ const CardProject = ({
                     <Tag key={index} label={tagName} color="SECONDARY" />
                 ))}
             </S.ContentTag>
+            <S.ContentLink>
+                <Link format="DESCRIPTION" navigate={accessLink?.navigate}>
+                    {accessLink?.label} +
+                </Link>
+            </S.ContentLink>
         </S.ContentRight>
-    </S.Container>
+    </S.CardComponent>
 );
 
 export default CardProject;

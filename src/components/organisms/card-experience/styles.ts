@@ -31,6 +31,14 @@ export const Container = styled.div`
             transform: rotateY(15deg) rotateX(-25deg) translateZ(-1px);
         }
     }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_MEDIUM} {
+        flex-direction: column;
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        flex-direction: column;
+    }
 `;
 
 export const ContentLeft = styled.div`

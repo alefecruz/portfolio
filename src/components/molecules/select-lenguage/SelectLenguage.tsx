@@ -4,49 +4,57 @@ import { type ReactElement, useState } from 'react';
 
 import * as S from './styles';
 
-import { ISelectLenguageProps, IIdioma } from './interfaces';
-import { Button, IButtonProps } from '@/components/molecules/button';
-import { Icon, IIconProps } from '@/components/atoms/icon';
+import { ISelectLenguageProps } from './interfaces';
+import { Text } from '@/components/atoms/text';
+import { Icon } from '@/components/atoms/icon';
+import { IIdioma } from '@/data/interfaces';
 
-const SelectLenguage = ({ onSelect }: ISelectLenguageProps): ReactElement => {
-    const [toggle, setToggle] = useState(false);
-    const [selected, setSelected] = useState<IIdioma>('PT_BR');
+const SelectLenguage = ({
+    onSelectIdioma,
+    initialIdioma,
+}: ISelectLenguageProps): ReactElement => {
+    const [toggle, setToggle] = useState(true);
+    const [selected, setSelected] = useState<IIdioma>(initialIdioma);
 
-    const mapperIcon: { [key in IIdioma]: IButtonProps['iconLeftName'] } = {
+    const idiomaMapper: { [key in IIdioma]: IButtonProps['iconLeftName'] } = {
         PT_BR: 'FLAG_BR',
         EN_US: 'FLAG_US',
     };
 
-    const handleSelect = (value: IIdioma) => {
-        setSelected(value);
-        setToggle(false);
-        onSelect && onSelect(value);
+    const translaterMaper = {
+        PT_BR: 'Português',
+        EN_US: 'English',
     };
+
     return (
-        <S.Container>
-            <Button
-                format="NONE_ACCENTED"
-                iconLeftName={mapperIcon[selected]}
-                onPress={() => setToggle((curr) => !curr)}
-            />
-            <Icon name="CHEVRON_DOWN" color="DARK" />
-            <Icon name="CHEVRON_UP" color="DARK" />
+        <S.Container onClick={() => setToggle((curr) => !curr)}>
             <Icon name="GLOBAL" color="DARK" />
-            <Icon name="MOON" color="DARK" />
-            <Icon name="SUN" color="DARK" />
-            {toggle && (
-                <S.SelectFlag>
-                    <Button
-                        format="NONE_ACCENTED"
-                        iconLeftName="FLAG_BR"
-                        onPress={() => handleSelect('PT_BR')}
-                    />
-                    <Button
-                        format="NONE_ACCENTED"
-                        iconLeftName="FLAG_US"
-                        onPress={() => handleSelect('EN_US')}
-                    />
-                </S.SelectFlag>
+            <Text color="DARK" format="BUTTON">
+                {translaterMaper[selected]}
+            </Text>
+            <Icon name={idiomaMapper[selected]} color="DARK" size="MEDIUM" />
+            {!toggle && (
+                <S.ContentOptions>
+                    {Object.keys(idiomaMapper).map((idioma) => (
+                        <S.SelectFlag
+                            key={idioma}
+                            onClick={() => {
+                                setSelected(idioma as IIdioma);
+                                setToggle((curr) => (curr = false));
+                                onSelectIdioma &&
+                                    onSelectIdioma(idioma as IIdioma);
+                            }}
+                        >
+                            <Text color="DARK" format="BUTTON">
+                                {translaterMaper[idioma as IIdioma]}
+                            </Text>
+                            <Icon
+                                name={idiomaMapper[idioma as IIdioma]}
+                                color="DARK"
+                            />
+                        </S.SelectFlag>
+                    ))}
+                </S.ContentOptions>
             )}
         </S.Container>
     );

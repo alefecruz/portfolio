@@ -1,5 +1,6 @@
-export type IIdioma = 'PT_BR' | 'EN_US';
+import { IIdioma } from '@/data/interfaces';
 
 export interface ISelectLenguageProps {
-    onSelect: () => void;
+    initialIdioma: IIdioma;
+    onSelectIdioma: (arg0: IIdioma) => void;
 }

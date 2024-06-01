@@ -8,7 +8,6 @@ import { IDefaultProps } from './interfaces';
 
 import { Text } from '@/components/atoms/text';
 import { Logo } from '@/components/molecules/logo';
-import { Down } from '@/components/molecules/down';
 import { SelectLenguage } from '@/components/molecules/select-lenguage';
 
 import { Button } from '@/components/molecules/button';
@@ -23,6 +22,7 @@ const Default = ({
     aboutSection,
     experienceSection,
     projectSection,
+    settings,
 }: IDefaultProps): ReactElement => {
     const {
         logo,
@@ -36,12 +36,10 @@ const Default = ({
 
     const { title: logoTitle, iconName: iconLogoName } = logo || {};
 
-    const { label: lebalGetInTouch, onPress: onPressGetInTouch } =
-        getInTouchButton || {};
-    const { label: lebalResume, onPress: onPressResume } = resumeButton || {};
+    const { label: lebalGetInTouch, email } = getInTouchButton || {};
+    const { label: lebalResume, link: linkResume } = resumeButton || {};
 
-    const { myPicture, aboutTitle, aboutRef, paragraphs, scrollDown } =
-        aboutSection || {};
+    const { myPicture, aboutTitle, aboutRef, paragraphs } = aboutSection || {};
     const {
         experienceRef,
         experienceTitle,
@@ -55,7 +53,7 @@ const Default = ({
                 {logoTitle && iconLogoName && (
                     <Logo iconName={iconLogoName} title={logoTitle} />
                 )}
-                <SelectLenguage onSelect={(value) => console.log(value)} />
+
                 <S.WrapperMyInfo>
                     <Text format="TITLE_2" color="ACCENTED">
                         {title}
@@ -64,38 +62,43 @@ const Default = ({
                         {description}
                     </Text>
                     <S.ContentSocialMedias>
-                        {socialButtonList.map(
-                            ({ onPress, iconLeftName }, index) => (
-                                <Button
-                                    key={index}
-                                    size="LARGE"
-                                    iconLeftName={iconLeftName}
-                                    format="NONE_ACCENTED"
-                                    onPress={onPress}
-                                />
-                            ),
-                        )}
+                        {socialButtonList.map(({ iconName, link }, index) => (
+                            <Button
+                                key={index}
+                                size="LARGE"
+                                iconLeftName={iconName}
+                                format="NONE_ACCENTED"
+                                onPress={() => window.open(link, '_Blanck')}
+                            />
+                        ))}
                     </S.ContentSocialMedias>
                 </S.WrapperMyInfo>
-                <Button
-                    size="SMALL"
-                    label={lebalResume}
-                    onPress={onPressResume}
-                    format="OUTLINE_ACCENTED"
-                />
-                <Navbar
-                    optionList={navbarOptionList}
-                    optionSelectedColor="SECONDARY"
-                    optionDontSelectedColor="ACCENTED"
-                />
-                <Button
-                    size="SMALL"
-                    label={lebalGetInTouch}
-                    onPress={onPressGetInTouch}
-                    format="FILLED_ACCENTED"
-                />
+                <S.ContentNav>
+                    <Button
+                        size="SMALL"
+                        label={lebalResume}
+                        onPress={() => window.open(linkResume)}
+                        format="OUTLINE_ACCENTED"
+                    />
+                    <Navbar
+                        optionList={navbarOptionList}
+                        optionSelectedColor="SECONDARY"
+                        optionDontSelectedColor="ACCENTED"
+                    />
+                    <Button
+                        size="SMALL"
+                        label={lebalGetInTouch}
+                        onPress={() =>
+                            (window.location.href = `mailto:${email}`)
+                        }
+                        format="FILLED_ACCENTED"
+                    />
+                </S.ContentNav>
             </S.ContentMyInfo>
             <S.ContentAbout id="about" ref={aboutRef}>
+                <S.ContentSettings>
+                    <SelectLenguage {...settings.idioma} />
+                </S.ContentSettings>
                 <SectionTitle title={aboutTitle} />
                 <S.WrapperAbout>
                     <Image source={myPicture.source} alt={myPicture.alt} />
@@ -105,11 +108,6 @@ const Default = ({
                         </Text>
                     ))}
                 </S.WrapperAbout>
-                {scrollDown && (
-                    <S.ContentScrollDown>
-                        <Down message={scrollDown} />
-                    </S.ContentScrollDown>
-                )}
             </S.ContentAbout>
             <S.ContentExperience id="experience" ref={experienceRef}>
                 <SectionTitle title={experienceTitle} />

@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+`;
 
 export const ContentMyInfo = styled.div`
     height: 100vh;
@@ -12,6 +16,26 @@ export const ContentMyInfo = styled.div`
     padding: ${({ theme }) => theme.SPACINGS.LARGE};
     justify-content: space-between;
     box-shadow: 10px 10px 10px -1px #000000;
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {
+        width: 100%;
+        box-shadow: none;
+        position: static;
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_MEDIUM} {
+        width: 100%;
+        box-shadow: none;
+        position: static;
+        padding-top: ${({ theme }) => theme.SPACINGS.HUGE};
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        width: 100%;
+        box-shadow: none;
+        position: static;
+        padding-top: ${({ theme }) => theme.SPACINGS.HUGE};
+    }
 `;
 
 export const WrapperMyInfo = styled.div`
@@ -20,12 +44,55 @@ export const WrapperMyInfo = styled.div`
     gap: ${({ theme }) => theme.SPACINGS.SMALL};
 
     flex-direction: column;
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {
+        width: 60%;
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_MEDIUM} {
+        width: 100%;
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        width: 100%;
+    }
 `;
 
 export const ContentSocialMedias = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {
+        width: 60%;
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_MEDIUM} {
+        width: 100%;
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        width: 100%;
+    }
+`;
+
+export const ContentNav = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: ${({ theme }) => theme.SPACINGS.SMALL};
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {
+        width: 60%;
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_MEDIUM} {
+        width: 100%;
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        width: 100%;
+    }
 `;
 
 export const ContentAbout = styled.div`
@@ -35,6 +102,30 @@ export const ContentAbout = styled.div`
     padding: ${({ theme }) => theme.SPACINGS.LARGE}
         ${({ theme }) => theme.SPACINGS.HUGE};
     background-color: ${({ theme }) => theme.COLORS.ACCENTED};
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {
+        width: 100%;
+        padding: ${({ theme }) => theme.SPACINGS.MEDIUM}
+            ${({ theme }) => theme.SPACINGS.LARGE};
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_MEDIUM} {
+        width: 100%;
+        padding: ${({ theme }) => theme.SPACINGS.SMALL}
+            ${({ theme }) => theme.SPACINGS.MEDIUM};
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        width: 100%;
+        padding: ${({ theme }) => theme.SPACINGS.XSMALL}
+            ${({ theme }) => theme.SPACINGS.SMALL};
+    }
+`;
+
+export const ContentSettings = styled.div`
+    right: 0;
+    top: 0;
+    position: absolute;
 `;
 
 export const ContentScrollDown = styled.div`
@@ -61,6 +152,23 @@ export const ContentExperience = styled.div`
     padding: ${({ theme }) => theme.SPACINGS.LARGE}
         ${({ theme }) => theme.SPACINGS.HUGE};
     background-color: ${({ theme }) => theme.COLORS.ACCENTED};
+    @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {
+        width: 100%;
+        padding: ${({ theme }) => theme.SPACINGS.MEDIUM}
+            ${({ theme }) => theme.SPACINGS.LARGE};
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_MEDIUM} {
+        width: 100%;
+        padding: ${({ theme }) => theme.SPACINGS.SMALL}
+            ${({ theme }) => theme.SPACINGS.MEDIUM};
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        width: 100%;
+        padding: ${({ theme }) => theme.SPACINGS.XSMALL}
+            ${({ theme }) => theme.SPACINGS.SMALL};
+    }
 `;
 
 export const WrapperExperience = styled.div`
@@ -73,6 +181,23 @@ export const ContentProject = styled.div`
     padding: ${({ theme }) => theme.SPACINGS.LARGE}
         ${({ theme }) => theme.SPACINGS.HUGE};
     background-color: ${({ theme }) => theme.COLORS.ACCENTED};
+    @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {
+        width: 100%;
+        padding: ${({ theme }) => theme.SPACINGS.MEDIUM}
+            ${({ theme }) => theme.SPACINGS.LARGE};
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_MEDIUM} {
+        width: 100%;
+        padding: ${({ theme }) => theme.SPACINGS.SMALL}
+            ${({ theme }) => theme.SPACINGS.MEDIUM};
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        width: 100%;
+        padding: ${({ theme }) => theme.SPACINGS.XSMALL}
+            ${({ theme }) => theme.SPACINGS.SMALL};
+    }
 `;
 
 export const WrapperProject = styled.div`

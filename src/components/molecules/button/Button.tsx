@@ -24,15 +24,6 @@ const Button = ({
             isStretch={isStretch}
             onClick={onPress}
         >
-            {iconLeftName !== undefined && (
-                <S.IconContent>
-                    <Icon
-                        name={iconLeftName}
-                        size={size}
-                        color={formarMapper[format].contentColor}
-                    />
-                </S.IconContent>
-            )}
             {label !== undefined && (
                 <S.LabelContent>
                     <Text
@@ -42,6 +33,15 @@ const Button = ({
                         {label}
                     </Text>
                 </S.LabelContent>
+            )}
+            {iconLeftName !== undefined && (
+                <S.IconContent>
+                    <Icon
+                        name={iconLeftName}
+                        size={size}
+                        color={formarMapper[format].contentColor}
+                    />
+                </S.IconContent>
             )}
         </S.ButtonComponent>
     );

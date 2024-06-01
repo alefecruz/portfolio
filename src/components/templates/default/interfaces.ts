@@ -1,44 +1,55 @@
 import { IImageProps } from '@/components/atoms/image';
-import { ITextProps } from '@/components/atoms/text';
 import { IButtonProps } from '@/components/molecules/button';
 import { IDownProps } from '@/components/molecules/down';
 
 import { ILogoProps } from '@/components/molecules/logo';
+import { ISelectLenguageProps } from '@/components/molecules/select-lenguage';
 import { ICardExperienceProps } from '@/components/organisms/card-experience';
 import { ICardProjectProps } from '@/components/organisms/card-project';
 import { INavbarProps } from '@/components/organisms/navbar';
 
 export interface IDefaultProps {
     myInfo: IMyInfo;
+    settings: {
+        idioma: ISelectLenguageProps;
+    };
     aboutSection: IAbout;
     experienceSection: IExperience;
     projectSection: IProject;
 }
 
-interface IMyInfo {
+export interface IMyInfo {
     logo?: ILogoProps;
     title: string;
     description: string;
-    socialButtonList: Pick<IButtonProps, 'iconLeftName' | 'onPress'>[];
+    socialButtonList: {
+        link: string;
+        iconName: IButtonProps['iconLeftName'];
+    }[];
     navbarOptionList: INavbarProps['optionList'];
-    getInTouchButton: Pick<IButtonProps, 'label' | 'onPress'>;
-    resumeButton: Pick<IButtonProps, 'label' | 'onPress'>;
+    getInTouchButton: {
+        label: string;
+        email: string;
+    };
+    resumeButton: {
+        label: string;
+        link: string;
+    };
 }
 
-interface IAbout {
+export interface IAbout {
     aboutTitle: string;
     aboutRef: any;
     myPicture: Pick<IImageProps, 'source' | 'alt'>;
-    paragraphs: ITextProps['children'][];
-    scrollDown: IDownProps['message'];
+    paragraphs: string[];
 }
 
-interface IExperience {
+export interface IExperience {
     experienceTitle: string;
     experienceRef: any;
     experienceList: ICardExperienceProps[];
 }
-interface IProject {
+export interface IProject {
     projectTitle: string;
     projectRef: any;
     projectList: ICardProjectProps[];

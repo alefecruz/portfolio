@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Icon } from '@/components/atoms/icon';
 
 export const Container = styled.div`
     width: 100vw;
@@ -8,9 +7,7 @@ export const Container = styled.div`
 
     justify-content: center;
     align-items: center;
-`;
 
-export const LoadingIcon = styled(Icon)`
     @keyframes rotation {
         from {
             transform: rotate(0deg);

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { CSSProp, css } from 'styled-components';
 import { ReactSVG } from 'react-svg';
 import { IIconProps } from './interfaces';
 

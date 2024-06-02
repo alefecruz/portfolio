@@ -14,7 +14,7 @@ export const ContentMyInfo = styled.div`
     display: flex;
     flex-direction: column;
     padding: ${({ theme }) => theme.SPACINGS.LARGE};
-    justify-content: space-between;
+    justify-content: space-around;
     box-shadow: 5px 5px 30px -5px #000000;
 
     @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {
@@ -98,7 +98,7 @@ export const ContentAbout = styled.div`
     height: 100vh;
     float: right;
     width: 73%;
-    padding: ${({ theme }) => theme.SPACINGS.LARGE}
+    padding: ${({ theme }) => theme.SPACINGS.HUGE}
         ${({ theme }) => theme.SPACINGS.HUGE};
     background-color: ${({ theme }) => theme.COLORS.ACCENTED};
 

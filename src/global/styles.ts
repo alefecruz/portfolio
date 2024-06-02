@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 &::-webkit-scrollbar-thumb:hover {
-    background: ${({ theme }) => theme.COLORS.TERNARY};
+    background: ${({ theme }) => theme.COLORS.BASE};
 }
 
 @font-face {

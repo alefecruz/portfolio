@@ -1,4 +1,4 @@
-import { type ThemeType } from './styled';
+import { type ITheme } from './styled';
 import * as themeMapper from './mappers';
 import { ISelectTheme } from './interfaces';
 
@@ -8,7 +8,7 @@ export const selectTheme = ({
     size = 'default',
     media = 'default',
     spacing = 'default',
-}: ISelectTheme): ThemeType => {
+}: ISelectTheme): ITheme => {
     return {
         ...themeMapper.colorMap[color],
         ...themeMapper.fontMap[font],

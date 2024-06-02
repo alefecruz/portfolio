@@ -8,6 +8,7 @@ import { ISelectLenguageProps } from './interfaces';
 import { Text } from '@/components/atoms/text';
 import { Icon } from '@/components/atoms/icon';
 import { IIdioma } from '@/data/interfaces';
+import { IButtonProps } from '../button';
 
 const SelectLenguage = ({
     onSelectIdioma,

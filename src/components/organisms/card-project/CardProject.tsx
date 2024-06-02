@@ -40,9 +40,10 @@ const CardProject = ({
                 ))}
             </S.ContentTag>
             <S.ContentLink>
-                <Link format="DESCRIPTION" navigate={accessLink?.navigate}>
-                    {accessLink?.label} +
-                </Link>
+                <Link
+                    format="DESCRIPTION"
+                    navigate={accessLink?.navigate}
+                >{`${accessLink?.label} +`}</Link>
             </S.ContentLink>
         </S.ContentRight>
     </S.CardComponent>

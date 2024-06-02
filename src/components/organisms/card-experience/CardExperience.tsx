@@ -18,26 +18,26 @@ const CardExperience = ({
 }: ICardExperienceProps): ReactElement => (
     <S.Container>
         <S.ContentLeft>
-            <Text format="TITLE_3" color="PRIMARY">
+            <Text format="TITLE_3" color="BASE">
                 {title}
             </Text>
-            <Text format="BODY" color="PRIMARY" letterCase="UPPER_CASE">
+            <Text format="BODY" color="BASE" letterCase="UPPER_CASE">
                 {period}
             </Text>
             <S.ContentSubtitle>
-                <Text format="DESCRIPTION" color="PRIMARY">
+                <Text format="DESCRIPTION" color="BASE">
                     {subtitle}
                 </Text>
             </S.ContentSubtitle>
             <S.ContentDescription>
-                <Text format="DESCRIPTION" color="PRIMARY">
+                <Text format="DESCRIPTION" color="BASE">
                     {description}
                 </Text>
             </S.ContentDescription>
         </S.ContentLeft>
         <S.ContentRight>
             {tagList.map((label, index) => (
-                <Tag key={index} label={label} color="SECONDARY" />
+                <Tag key={index} label={label} color="PRIMARY" />
             ))}
         </S.ContentRight>
     </S.Container>

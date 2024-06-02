@@ -55,10 +55,10 @@ const Default = ({
                 )}
 
                 <S.WrapperMyInfo>
-                    <Text format="TITLE_2" color="ACCENTED">
+                    <Text format="TITLE_2" color="BASE">
                         {title}
                     </Text>
-                    <Text format="BODY" color="TERNARY">
+                    <Text format="BODY" color="BASE">
                         {description}
                     </Text>
                     <S.ContentSocialMedias>
@@ -67,7 +67,7 @@ const Default = ({
                                 key={index}
                                 size="LARGE"
                                 iconLeftName={iconName}
-                                format="NONE_ACCENTED"
+                                format="NONE_BASE"
                                 onPress={() => window.open(link, '_Blanck')}
                             />
                         ))}
@@ -103,7 +103,7 @@ const Default = ({
                 <S.WrapperAbout>
                     <Image source={myPicture.source} alt={myPicture.alt} />
                     {paragraphs.map((paragraph, index) => (
-                        <Text key={index} format="DESCRIPTION" color="LIGHT">
+                        <Text key={index} format="DESCRIPTION" color="BASE">
                             {paragraph}
                         </Text>
                     ))}

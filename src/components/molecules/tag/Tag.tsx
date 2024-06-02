@@ -9,7 +9,7 @@ import { ITagProps } from './interfaces';
 const Button = ({ label, color = 'ACCENTED' }: ITagProps): ReactElement => {
     return (
         <S.TagComponent color={color}>
-            <Text format="TAG" color="LIGHT">
+            <Text format="TAG" color="BASE">
                 {label}
             </Text>
         </S.TagComponent>

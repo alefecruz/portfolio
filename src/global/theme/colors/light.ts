@@ -5,9 +5,7 @@ export const COLORS: IColorTheme = {
     DISABLED: '#FFFFFF',
     PRIMARY: '#FFFFFF',
     SECONDARY: '#FFFFFF',
-    TERNARY: '#000000',
 
-    LIGHT: '#FFFFFF',
-    DARK: '#FFFFFF',
+    BASE: '#000000',
     DANGER: '#000000',
 };

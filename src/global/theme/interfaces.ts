@@ -5,16 +5,14 @@ export interface IColorTheme {
     ACCENTED: CSSProp;
     PRIMARY: CSSProp;
     SECONDARY: CSSProp;
-    TERNARY: CSSProp;
     DISABLED: CSSProp;
     DANGER: CSSProp;
-    LIGHT: CSSProp;
-    DARK: CSSProp;
+    BASE: CSSProp;
 }
 
 export interface IFontTheme {
     THIN: CSSProp;
-    LIGHT: CSSProp;
+    BASE: CSSProp;
     REGULAR: CSSProp;
     MEDIUM: CSSProp;
     SEMI_BOLD: CSSProp;

@@ -15,7 +15,7 @@ export const ContentMyInfo = styled.div`
     flex-direction: column;
     padding: ${({ theme }) => theme.SPACINGS.LARGE};
     justify-content: space-between;
-    box-shadow: 10px 10px 10px -1px #000000;
+    box-shadow: 5px 5px 30px -5px #000000;
 
     @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {
         width: 100%;
@@ -42,7 +42,6 @@ export const WrapperMyInfo = styled.div`
     width: 100%;
     display: flex;
     gap: ${({ theme }) => theme.SPACINGS.SMALL};
-
     flex-direction: column;
 
     @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {

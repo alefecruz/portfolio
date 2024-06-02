@@ -18,6 +18,6 @@ export interface IFormatMapper {
     box: RuleSet<object>;
     contentColor: keyof Pick<
         IColorTheme,
-        'ACCENTED' | 'PRIMARY' | 'SECONDARY' | 'LIGHT'
+        'ACCENTED' | 'PRIMARY' | 'SECONDARY' | 'BASE'
     >;
 }

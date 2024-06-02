@@ -7,8 +7,12 @@ import * as SPACINGS from './spacings';
 
 export const colorMap = {
     default: COLORS.DEFAULT,
-    dark: COLORS.DARK,
-    light: COLORS.LIGHT,
+    springDark: COLORS.SPRING_DARK,
+    springLight: COLORS.SPRING_LIGHT,
+    outuneLight: COLORS.OUTUNE_LIGHT,
+    outuneDark: COLORS.OUTUNE_DARK,
+
+    light: COLORS.BASE,
 };
 
 export const fontMap = {

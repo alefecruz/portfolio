@@ -17,7 +17,6 @@ export const CardComponent = styled.div`
 
     &:hover {
         transform: scale(1);
-        opacity: 0.7;
     }
 
     &::before {

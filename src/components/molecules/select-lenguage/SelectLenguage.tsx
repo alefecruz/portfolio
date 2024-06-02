@@ -28,11 +28,15 @@ const SelectLenguage = ({
 
     return (
         <S.Container onClick={() => setToggle((curr) => !curr)}>
-            <Icon name="GLOBAL" color="DARK" />
-            <Text color="DARK" format="BUTTON">
+            <Icon name="GLOBAL" color="ACCENTED" />
+            <Text color="ACCENTED" format="BUTTON">
                 {translaterMaper[selected]}
             </Text>
-            <Icon name={idiomaMapper[selected]} color="DARK" size="MEDIUM" />
+            <Icon
+                name={idiomaMapper[selected]}
+                color="ACCENTED"
+                size="MEDIUM"
+            />
             {!toggle && (
                 <S.ContentOptions>
                     {Object.keys(idiomaMapper).map((idioma) => (
@@ -45,12 +49,12 @@ const SelectLenguage = ({
                                     onSelectIdioma(idioma as IIdioma);
                             }}
                         >
-                            <Text color="DARK" format="BUTTON">
+                            <Text color="ACCENTED" format="BUTTON">
                                 {translaterMaper[idioma as IIdioma]}
                             </Text>
                             <Icon
                                 name={idiomaMapper[idioma as IIdioma]}
-                                color="DARK"
+                                color="ACCENTED"
                             />
                         </S.SelectFlag>
                     ))}

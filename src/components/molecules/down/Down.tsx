@@ -11,7 +11,7 @@ import { IDownProps } from './interfaces';
 const Down = ({ message }: IDownProps): ReactElement => (
     <S.Container>
         <Icon name="MOUSE" color="SECONDARY" />
-        <Text format="TAG" color="SECONDARY">
+        <Text format="TAG" color="BASE">
             {message}
         </Text>
     </S.Container>

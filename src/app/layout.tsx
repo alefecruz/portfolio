@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { StyledComponentsRegistry } from '../lib/style';
 
 import { GlobalStyles } from '@/global/styles';
-import { selectTheme } from '@/global/theme';
+import { ISelectTheme, selectTheme } from '@/global/theme';
 
 export default function RootLayout({
     children,
@@ -12,12 +12,13 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     const theme = selectTheme({
-        color: 'default',
+        color: 'outuneDark',
         font: 'montserrat',
         size: 'default',
         media: 'default',
         spacing: 'default',
     });
+
     return (
         <StyledComponentsRegistry>
             <ThemeProvider theme={theme}>

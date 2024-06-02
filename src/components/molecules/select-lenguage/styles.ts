@@ -9,12 +9,16 @@ export const Container = styled.button`
     cursor: pointer;
     position: relative;
     column-gap: 24px;
+    background-color: ${({ theme }) => theme.COLORS.BASE};
+    box-shadow: 0 0 10px -5px #000000;
 `;
 export const ContentOptions = styled.div`
     width: 100%;
     left: 0;
     top: 48px;
     position: absolute;
+    box-shadow: 0 0 10px -5px #000000;
+
     border: 5px solid ${({ theme }) => theme.COLORS.ACCENTED};
 `;
 
@@ -28,8 +32,9 @@ export const SelectFlag = styled.button`
     justify-content: space-between;
     align-items: center;
 
-    background-color: ${({ theme }) => theme.COLORS.LIGHT};
+    background-color: ${({ theme }) => theme.COLORS.BASE};
+
     &:hover {
-        background-color: ${({ theme }) => theme.COLORS.TERNARY};
+        background-color: ${({ theme }) => theme.COLORS.PRIMARY};
     }
 `;

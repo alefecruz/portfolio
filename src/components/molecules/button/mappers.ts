@@ -33,14 +33,14 @@ export const formarMapper: {
             background-color: ${({ theme }) => theme.COLORS.PRIMARY};
             padding: 1.2rem;
         `,
-        contentColor: 'LIGHT',
+        contentColor: 'BASE',
     },
     FILLED_SECONDARY: {
         box: css`
             background-color: ${({ theme }) => theme.COLORS.SECONDARY};
             padding: 1.2rem;
         `,
-        contentColor: 'LIGHT',
+        contentColor: 'BASE',
     },
     FILLED_ACCENTED: {
         box: css`
@@ -66,5 +66,11 @@ export const formarMapper: {
             background-color: transparent;
         `,
         contentColor: 'ACCENTED',
+    },
+    NONE_BASE: {
+        box: css`
+            background-color: transparent;
+        `,
+        contentColor: 'BASE',
     },
 };

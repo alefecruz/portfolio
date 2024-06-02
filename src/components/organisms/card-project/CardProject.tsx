@@ -27,16 +27,16 @@ const CardProject = ({
         )}
         <S.ContentRight>
             <S.ContentTitle>
-                <Text format="TITLE_3" color="PRIMARY">
+                <Text format="TITLE_3" color="BASE">
                     {title}
                 </Text>
             </S.ContentTitle>
-            <Text format="DESCRIPTION" color="PRIMARY">
+            <Text format="DESCRIPTION" color="BASE">
                 {description}
             </Text>
             <S.ContentTag>
                 {tagList.map((tagName, index) => (
-                    <Tag key={index} label={tagName} color="SECONDARY" />
+                    <Tag key={index} label={tagName} color="PRIMARY" />
                 ))}
             </S.ContentTag>
             <S.ContentLink>

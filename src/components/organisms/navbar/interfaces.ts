@@ -9,7 +9,7 @@ export interface INavbarProps {
     >;
     optionDontSelectedColor?: keyof Pick<
         IColorTheme,
-        'ACCENTED' | 'PRIMARY' | 'SECONDARY' | 'LIGHT'
+        'ACCENTED' | 'PRIMARY' | 'SECONDARY' | 'BASE'
     >;
 }
 

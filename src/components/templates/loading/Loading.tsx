@@ -6,7 +6,7 @@ import * as S from './styles';
 
 const Loading = (): ReactElement => (
     <S.Container>
-        <S.LoadingIcon name="LOGO" color="LIGHT" size="HUGE" />
+        <S.LoadingIcon name="LOGO" color="BASE" size="HUGE" />
     </S.Container>
 );
 

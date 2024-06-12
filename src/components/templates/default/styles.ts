@@ -202,3 +202,29 @@ export const ContentProject = styled.div`
 export const WrapperProject = styled.div`
     margin-top: ${({ theme }) => theme.SPACINGS.LARGE};
 `;
+
+export const ContentFooter = styled.div`
+    float: right;
+    width: 73%;
+    padding: ${({ theme }) => theme.SPACINGS.LARGE}
+        ${({ theme }) => theme.SPACINGS.HUGE};
+    height: 12vh;
+    background-color: ${({ theme }) => theme.COLORS.BASE};
+    @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {
+        width: 100%;
+        padding: ${({ theme }) => theme.SPACINGS.MEDIUM}
+            ${({ theme }) => theme.SPACINGS.LARGE};
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_MEDIUM} {
+        width: 100%;
+        padding: ${({ theme }) => theme.SPACINGS.SMALL}
+            ${({ theme }) => theme.SPACINGS.MEDIUM};
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        width: 100%;
+        padding: ${({ theme }) => theme.SPACINGS.XSMALL}
+            ${({ theme }) => theme.SPACINGS.SMALL};
+    }
+`;

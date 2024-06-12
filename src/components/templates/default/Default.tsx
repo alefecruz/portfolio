@@ -16,6 +16,7 @@ import { Image } from '@/components/atoms/image';
 import { SectionTitle } from '@/components/molecules/section-title';
 import { CardExperience } from '@/components/organisms/card-experience';
 import { CardProject } from '@/components/organisms/card-project';
+import { Link } from '@/components/molecules/link';
 
 const Default = ({
     myInfo,
@@ -126,6 +127,11 @@ const Default = ({
                         ))}
                 </S.WrapperProject>
             </S.ContentProject>
+            <S.ContentFooter>
+                <Text format="DESCRIPTION" color="ACCENTED">
+                    Copyright © 2024
+                </Text>
+            </S.ContentFooter>
         </S.Container>
     );
 };

@@ -25,7 +25,7 @@ export const myInfo: IMyInfoData = {
             title: 'Olá! Sou Álefe Cruz',
             iconName: 'LOGO',
         },
-        title: 'Engenheiro da Compatação | Desenvolvedor | Lider Técnico',
+        title: 'Engenheiro da Computação | Desenvolvedor | Lider Técnico',
         description:
             'Sempre em busca de novos desafios e oportunidades de aprendizado para aprimorar minhas habilidades técnicas e de liderança.',
         socialButtonList,

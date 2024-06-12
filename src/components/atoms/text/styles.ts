@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 import { ITextProps } from './interfaces';
-import { formatMepper, letterCaseMapper } from './mappers';
+import { formatMepper, letterCaseMapper, alignMapper } from './mappers';
 
 export const TextComponent = styled.div<ITextProps>`
     color: ${({ theme, color }) =>
         color === undefined ? theme.COLORS.PRIMARY : theme.COLORS[color]};
     ${({ letterCase }) =>
-        letterCase === undefined
-            ? letterCaseMapper.NONE
-            : letterCaseMapper[letterCase]}
-    ${({ format }) =>
-        format === undefined ? formatMepper.BODY : formatMepper[format]}
+        !letterCase ? letterCaseMapper.NONE : letterCaseMapper[letterCase]}
+    ${({ format }) => (!format ? formatMepper.BODY : formatMepper[format])}
+    ${({ align }) => (!align ? alignMapper.NONE : alignMapper[align])}
 `;

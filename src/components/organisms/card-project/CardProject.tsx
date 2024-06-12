@@ -22,7 +22,12 @@ const CardProject = ({
     <S.CardComponent>
         {projectImage && (
             <S.ContentLeft>
-                <Image source={projectImage?.source} alt={projectImage?.alt} />
+                <Image
+                    source={projectImage?.source}
+                    alt={projectImage?.alt}
+                    sizeWidth={30}
+                    hasBorder={false}
+                />
             </S.ContentLeft>
         )}
         <S.ContentRight>
@@ -34,17 +39,20 @@ const CardProject = ({
             <Text format="DESCRIPTION" color="BASE">
                 {description}
             </Text>
-            <S.ContentTag>
+            <S.ContainerTag>
                 {tagList.map((tagName, index) => (
                     <Tag key={index} label={tagName} color="PRIMARY" />
                 ))}
-            </S.ContentTag>
-            <S.ContentLink>
-                <Link
-                    format="DESCRIPTION"
-                    navigate={accessLink?.navigate}
-                >{`${accessLink?.label} +`}</Link>
-            </S.ContentLink>
+            </S.ContainerTag>
+
+            {accessLink && (
+                <S.ContentLink>
+                    <Link
+                        format="DESCRIPTION"
+                        navigate={accessLink?.navigate}
+                    >{`${accessLink?.label} +`}</Link>
+                </S.ContentLink>
+            )}
         </S.ContentRight>
     </S.CardComponent>
 );

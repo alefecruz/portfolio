@@ -56,3 +56,18 @@ export const letterCaseMapper = {
         text-transform: none;
     `,
 };
+
+export const alignMapper = {
+    CENTER: css`
+        text-align: center;
+    `,
+    LEFT: css`
+        text-align: left;
+    `,
+    RIGHT: css`
+        text-align: right;
+    `,
+    NONE: css`
+        text-align: none;
+    `,
+};

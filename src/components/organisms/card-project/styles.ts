@@ -53,14 +53,31 @@ export const CardComponent = styled.div`
 export const ContentLeft = styled.div`
     display: flex;
     align-items: center;
-    margin: ${({ theme }) => theme.SPACINGS.SMALL};
 `;
+
 export const ContentRight = styled.div`
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     margin: ${({ theme }) => theme.SPACINGS.SMALL};
     gap: ${({ theme }) => theme.SPACINGS.SMALL};
     justify-content: space-between;
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_XLARGE} {
+        max-width: 100%;
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {
+        max-width: 100%;
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_MEDIUM} {
+        max-width: 100%;
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        max-width: 100%;
+    }
 `;
 
 export const ContentTitle = styled.div`
@@ -70,8 +87,10 @@ export const ContentTitle = styled.div`
     align-items: center;
 `;
 
-export const ContentTag = styled.div`
+export const ContainerTag = styled.div`
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 `;
 
 export const ContentLink = styled.div`

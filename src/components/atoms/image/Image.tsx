@@ -9,6 +9,7 @@ const Image = ({
     sizeHeight,
     sizeWidth,
     alt,
+    hasBorder = true,
 }: IImageProps): ReactElement => {
     return (
         <S.ImageComponent
@@ -16,6 +17,7 @@ const Image = ({
             sizeHeight={sizeHeight}
             sizeWidth={sizeWidth}
             alt={alt}
+            hasBorder={hasBorder}
         />
     );
 };

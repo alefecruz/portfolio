@@ -1,5 +1,5 @@
 {
-    "name": "protifolio",
+    "name": "portfolio/exemplo",
     "description": "Compose",
     "authors": [
         {
@@ -7,7 +7,6 @@
             "email": "alefe@devot.com.br"
         }
     ],
-    "require": {},
     "scripts": {
         "post-install-cmd": [
             "sh -c 'find public_html -mindepth 1 -maxdepth 1 ! -name out -exec rm -rf {} +'"

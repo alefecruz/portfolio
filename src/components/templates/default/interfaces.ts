@@ -40,7 +40,7 @@ export interface IMyInfo {
 export interface IAbout {
     aboutTitle: string;
     aboutRef: any;
-    myPicture: Pick<IImageProps, 'source' | 'alt'>;
+    myPicture: Pick<IImageProps, 'source' | 'alt' | 'sizeWidth'>;
     paragraphs: string[];
 }
 

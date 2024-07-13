@@ -70,6 +70,7 @@ export const projects: IProjectsData = {
                 projectImage: {
                     source: '/assets/images/projectSalvus.png',
                     alt: 'Salvus',
+                    sizeWidth: 30,
                 },
                 title: 'SALVUS-CHALLENGE',
                 accessLink: {

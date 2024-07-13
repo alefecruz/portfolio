@@ -5,7 +5,14 @@ import { IImageProps } from './interfaces';
 export const ImageComponent = styled.img<
     Pick<IImageProps, 'sizeHeight' | 'sizeWidth' | 'hasBorder'>
 >`
-    width: ${({ sizeWidth }) => (sizeWidth ? sizeWidth : 20)}rem;
+    ${({ sizeWidth }) =>
+        sizeWidth
+            ? css`
+                  width: 20rem;
+              `
+            : css`
+                  width: 100%;
+              `}
     height: ${({ sizeHeight }) => sizeHeight !== undefined && sizeHeight}rem;
     ${({ theme, hasBorder }) =>
         hasBorder &&

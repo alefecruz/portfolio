@@ -102,7 +102,11 @@ const Default = ({
                 </S.ContentSettings>
                 <SectionTitle title={aboutTitle} />
                 <S.WrapperAbout>
-                    <Image source={myPicture.source} alt={myPicture.alt} />
+                    <Image
+                        source={myPicture.source}
+                        alt={myPicture.alt}
+                        sizeWidth={myPicture.sizeWidth}
+                    />
                     {paragraphs.map((paragraph, index) => (
                         <Text key={index} format="DESCRIPTION" color="BASE">
                             {paragraph}

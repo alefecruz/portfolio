@@ -25,7 +25,7 @@ const CardProject = ({
                 <Image
                     source={projectImage?.source}
                     alt={projectImage?.alt}
-                    sizeWidth={30}
+                    sizeWidth={projectImage?.sizeWidth}
                     hasBorder={false}
                 />
             </S.ContentLeft>

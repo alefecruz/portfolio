@@ -1,14 +1,12 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Default } from '@/components/templates/default';
-import { Loading } from '@/components/templates/loading';
 
 import * as data from '@/data';
 import { IIdioma } from '@/data/interfaces';
 
 export default function App() {
-    const [isLoaging, setIsLoading] = useState(true);
     const [idioma, setIdioma] = useState<IIdioma>('PT_BR');
     const aboutRef = useRef(null);
     const projectRef = useRef(null);
@@ -17,16 +15,6 @@ export default function App() {
     const handleScrollToSection = (ref: any) => {
         ref?.current?.scrollIntoView({ behavior: 'smooth' });
     };
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 1000);
-
-        return () => clearTimeout(timer);
-    }, []);
-
-    if (isLoaging) return <Loading />;
 
     return (
         <Default

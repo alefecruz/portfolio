@@ -7,7 +7,9 @@ export const Container = styled.div`
 
     justify-content: center;
     align-items: center;
+`;
 
+export const AnimationIcon = styled.div`
     @keyframes rotation {
         from {
             transform: rotate(0deg);

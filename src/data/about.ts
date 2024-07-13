@@ -4,7 +4,7 @@ const myPicture = '/assets/images/myPicture.png';
 
 export const about: IAboutData = {
     PT_BR: {
-        aboutTitle: 'Sobre Test',
+        aboutTitle: 'Sobre',
         myPicture: {
             source: myPicture,
             alt: 'minha imagem',

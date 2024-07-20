@@ -10,11 +10,11 @@
     "scripts": {
         "post-install-cmd": [
             "find ../ -mindepth 1 -maxdepth 1 ! -name 'portifolio' -exec rm -rf {} +",
-            "mv out/* ../ && rm -rf out"
+            "cp out/* ../ && rm -rf out"
         ],
         "post-update-cmd": [
             "find ../ -mindepth 1 -maxdepth 1 ! -name 'portifolio' -exec rm -rf {} +",
-            "mv out/* ../ && rm -rf out"
+            "cp out/* ../ && rm -rf out"
         ]
     }
 }

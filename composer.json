@@ -9,11 +9,11 @@
     ],
     "scripts": {
         "post-install-cmd": [
-            "find ../ -mindepth 1 -maxdepth 1 ! -name 'portifolio' -exec rm -rf {} +",
+            "find ../ -mindepth 1 -maxdepth 1 ! -name 'portfolio' -exec rm -rf {} +",
             "cp -r out/* ../"
         ],
         "post-update-cmd": [
-            "find ../ -mindepth 1 -maxdepth 1 ! -name 'portifolio' -exec rm -rf {} +",
+            "find ../ -mindepth 1 -maxdepth 1 ! -name 'portfolio' -exec rm -rf {} +",
             "cp -r out/* ../"
         ]
     }

@@ -21,6 +21,7 @@ export const about: IAboutData = {
         myPicture: {
             source: myPicture,
             alt: 'minha imagem',
+            sizeWidth: 30,
         },
         paragraphs: [
             'I am Álefe Cruz, a Computer Engineer graduated from the Escola Politécnica de Pernambuco (POLI - UPE), with over 5 years of experience in software development. Currently, I am working as a Tech Lead and Senior Mobile Developer, leading teams and projects that transform innovative ideas into functional technological solutions.',

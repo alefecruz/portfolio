@@ -3,16 +3,50 @@
     "description": "Compose",
     "authors": [
         {
-            "name": "Álefe Cruiz",
+            "name": "Álefe Cruz",
             "email": "alefe@devot.com.br"
         }
     ],
     "scripts": {
         "post-install-cmd": [
-           "./cleanup.sh"
+            "rm -rf .husky",
+            "rm -rf assets",
+            "rm -rf generators",
+            "rm -rf public",
+            "rm -rf src",
+            "rm .editorconfig",
+            "rm .eslintrc.json",
+            "rm .gitattributes",
+            "rm .gitignore",
+            "rm .prettierrc.js",
+            "rm commitlint.config.js",
+            "rm next.config.js",
+            "rm package-lock.json",
+            "rm package.json",
+            "rm README.md",
+            "rm tsconfig.json",
+            "rm yarn.lock",
+            "mv out/* . && rm -rf out"
         ],
         "post-update-cmd": [
-           "./cleanup.sh"
+            "rm -rf .husky",
+            "rm -rf assets",
+            "rm -rf generators",
+            "rm -rf public",
+            "rm -rf src",
+            "rm .editorconfig",
+            "rm .eslintrc.json",
+            "rm .gitattributes",
+            "rm .gitignore",
+            "rm .prettierrc.js",
+            "rm commitlint.config.js",
+            "rm next.config.js",
+            "rm package-lock.json",
+            "rm package.json",
+            "rm README.md",
+            "rm tsconfig.json",
+            "rm yarn.lock",
+            "mv out/* . && rm -rf out"
         ]
     }
 }

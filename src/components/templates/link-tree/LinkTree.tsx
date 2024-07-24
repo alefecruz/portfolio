@@ -47,6 +47,7 @@ const LinkTree = ({
                 )}
                 <S.ToogleContent>
                     <ToggleButton
+                        value={true}
                         onToggle={(value) =>
                             value
                                 ? handleChangeColorTheme('outuneDark')

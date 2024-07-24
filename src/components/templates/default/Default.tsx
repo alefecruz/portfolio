@@ -57,6 +57,7 @@ const Default = ({
                     <Logo iconName={iconLogoName} title={logoTitle} />
                 )}
                 <ToggleButton
+                    value={true}
                     onToggle={(value) =>
                         value
                             ? handleChangeColorTheme('outuneDark')

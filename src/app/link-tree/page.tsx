@@ -5,7 +5,7 @@ import { LinkTree as LinkTreeTemplate } from '@/components/templates/link-tree';
 import * as data from '@/data';
 import { IIdioma } from '@/data/interfaces';
 
-export default function Lin() {
+export default function LinkTree() {
     const [idioma, setIdioma] = useState<IIdioma>('PT_BR');
     const { linkTree } = data;
 

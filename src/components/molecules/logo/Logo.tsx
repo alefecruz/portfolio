@@ -11,9 +11,11 @@ import { ILogoProps } from './interfaces';
 const Logo = ({ iconName, title }: ILogoProps): ReactElement => (
     <S.Container>
         <Icon name={iconName} color="BASE" size="XLARGE" />
-        <S.ContentLogoInfo>
-            <S.Title>{title}</S.Title>
-        </S.ContentLogoInfo>
+        {title && (
+            <S.ContentLogoInfo>
+                <S.Title>{title}</S.Title>
+            </S.ContentLogoInfo>
+        )}
     </S.Container>
 );
 

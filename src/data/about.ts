@@ -8,7 +8,7 @@ export const about: IAboutData = {
         myPicture: {
             source: myPicture,
             alt: 'minha imagem',
-            sizeWidth: 30,
+            sizeWidth: 20,
         },
         paragraphs: [
             'Sou Álefe Cruz, engenheira de Computação formada pela Escola Politécnica de Pernambuco (POLI - UPE), com mais de 5 anos de experiência em desenvolvimento de software. Atualmente, atuo como Tech Lead e Senior Mobile Developer, liderando equipes e projetos que transformam ideias inovadoras em soluções tecnológicas funcionais.',

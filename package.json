@@ -12,11 +12,14 @@
     "gen:component": "npx plop --plopfile generators/components/plopfile.js"
   },
   "dependencies": {
+    "@react-three/drei": "^9.108.4",
+    "@react-three/fiber": "^8.16.8",
     "axios": "^1.7.2",
+    "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3",
-    "react-svg": "^16.1.29"
+    "react-svg": "^16.1.29",
+    "three": "^0.166.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.8.0",
@@ -26,6 +29,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/styled-components": "^5.1.28",
+    "@types/three": "^0.166.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8",

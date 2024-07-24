@@ -13,6 +13,8 @@ import { IButtonProps } from '../button';
 const SelectLenguage = ({
     onSelectIdioma,
     initialIdioma,
+    isHideGlobalIcon = false,
+    isHideLanguageText = false,
 }: ISelectLenguageProps): ReactElement => {
     const [toggle, setToggle] = useState(true);
     const [selected, setSelected] = useState<IIdioma>(initialIdioma);
@@ -29,15 +31,19 @@ const SelectLenguage = ({
 
     return (
         <S.Container onClick={() => setToggle((curr) => !curr)}>
-            <Icon name="GLOBAL" color="ACCENTED" />
-            <Text color="ACCENTED" format="BUTTON">
-                {translaterMaper[selected]}
-            </Text>
-            <Icon
-                name={idiomaMapper[selected]}
-                color="ACCENTED"
-                size="MEDIUM"
-            />
+            {!isHideGlobalIcon && <Icon name="GLOBAL" color="ACCENTED" />}
+            {!isHideLanguageText && (
+                <Text color="ACCENTED" format="BUTTON">
+                    {translaterMaper[selected]}
+                </Text>
+            )}
+            <S.Flag>
+                <Icon
+                    name={idiomaMapper[selected]}
+                    color="ACCENTED"
+                    size="MEDIUM"
+                />
+            </S.Flag>
             {!toggle && (
                 <S.ContentOptions>
                     {Object.keys(idiomaMapper).map((idioma) => (
@@ -49,10 +55,13 @@ const SelectLenguage = ({
                                 onSelectIdioma &&
                                     onSelectIdioma(idioma as IIdioma);
                             }}
+                            isHideLanguageText={isHideLanguageText}
                         >
-                            <Text color="ACCENTED" format="BUTTON">
-                                {translaterMaper[idioma as IIdioma]}
-                            </Text>
+                            {!isHideLanguageText && (
+                                <Text color="ACCENTED" format="BUTTON">
+                                    {translaterMaper[idioma as IIdioma]}
+                                </Text>
+                            )}
                             <Icon
                                 name={idiomaMapper[idioma as IIdioma]}
                                 color="ACCENTED"

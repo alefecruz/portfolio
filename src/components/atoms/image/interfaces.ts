@@ -3,5 +3,6 @@ export interface IImageProps {
     alt: string;
     hasBorder?: boolean;
     sizeWidth?: number;
+    isCircle?: boolean;
     sizeHeight?: number;
 }

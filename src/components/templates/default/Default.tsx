@@ -1,6 +1,6 @@
 'use client';
 
-import { type ReactElement } from 'react';
+import { useContext, type ReactElement } from 'react';
 
 import * as S from './styles';
 
@@ -16,7 +16,8 @@ import { Image } from '@/components/atoms/image';
 import { SectionTitle } from '@/components/molecules/section-title';
 import { CardExperience } from '@/components/organisms/card-experience';
 import { CardProject } from '@/components/organisms/card-project';
-import { Link } from '@/components/molecules/link';
+import { ThemeContext } from '@/context/ThemeContext';
+import { ToggleButton } from '@/components/molecules/toggle-button';
 
 const Default = ({
     myInfo,
@@ -25,6 +26,7 @@ const Default = ({
     projectSection,
     settings,
 }: IDefaultProps): ReactElement => {
+    const { handleChangeColorTheme } = useContext(ThemeContext);
     const {
         logo,
         description,
@@ -54,7 +56,13 @@ const Default = ({
                 {logoTitle && iconLogoName && (
                     <Logo iconName={iconLogoName} title={logoTitle} />
                 )}
-
+                <ToggleButton
+                    onToggle={(value) =>
+                        value
+                            ? handleChangeColorTheme('outuneDark')
+                            : handleChangeColorTheme('outuneLight')
+                    }
+                />
                 <S.WrapperMyInfo>
                     <Text format="TITLE_2" color="BASE">
                         {title}
@@ -100,6 +108,7 @@ const Default = ({
                 <S.ContentSettings>
                     <SelectLenguage {...settings.idioma} />
                 </S.ContentSettings>
+
                 <SectionTitle title={aboutTitle} />
                 <S.WrapperAbout>
                     <Image

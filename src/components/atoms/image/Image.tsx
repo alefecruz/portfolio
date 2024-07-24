@@ -10,6 +10,7 @@ const Image = ({
     sizeWidth,
     alt,
     hasBorder = true,
+    isCircle = false,
 }: IImageProps): ReactElement => {
     return (
         <S.ImageComponent
@@ -18,6 +19,7 @@ const Image = ({
             sizeWidth={sizeWidth}
             alt={alt}
             hasBorder={hasBorder}
+            isCircle={isCircle}
         />
     );
 };

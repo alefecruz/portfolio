@@ -12,6 +12,11 @@ export const Container = styled.button`
     background-color: ${({ theme }) => theme.COLORS.BASE};
     box-shadow: 0 0 10px -5px #000000;
 `;
+
+export const Flag = styled.div`
+    margin-top: 5px;
+`;
+
 export const ContentOptions = styled.div`
     width: 100%;
     left: 0;
@@ -22,14 +27,15 @@ export const ContentOptions = styled.div`
     border: 5px solid ${({ theme }) => theme.COLORS.ACCENTED};
 `;
 
-export const SelectFlag = styled.button`
+export const SelectFlag = styled.button<{ isHideLanguageText: boolean }>`
     width: 100%;
     padding: 1.2rem 2rem;
 
     cursor: pointer;
     border: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: ${({ isHideLanguageText }) =>
+        isHideLanguageText ? 'center' : 'space-between'};
     align-items: center;
 
     background-color: ${({ theme }) => theme.COLORS.BASE};

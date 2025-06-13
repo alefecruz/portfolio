@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     border: 6px solid ${({ theme }) => theme.COLORS.SECONDARY};
-    padding: ${({ theme }) => theme.SPACINGS.MEDIUM};
-    margin: ${({ theme }) => theme.SPACINGS.MEDIUM};
+    padding: ${({ theme }) => theme.SPACINGS.SMALL};
+    margin: ${({ theme }) => theme.SPACINGS.SMALL};
     background-color: ${({ theme }) => theme.COLORS.ACCENTED};
     justify-content: space-between;
 

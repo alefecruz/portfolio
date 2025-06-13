@@ -5,33 +5,13 @@ export const CardComponent = styled.div`
     border-style: solid;
     border-color: ${({ theme }) => theme.COLORS.SECONDARY};
     border-width: 6px;
-    padding: ${({ theme }) => theme.SPACINGS.LARGE};
-    margin: ${({ theme }) => theme.SPACINGS.MEDIUM};
 
-    transform: rotateY(-15deg) rotateX(25deg) translateZ(4.5rem);
-    transform-origin: 100% 100%;
-    transform-style: preserve-3d;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
     transition: 0.3s ease transform;
     background-color: ${({ theme }) => theme.COLORS.ACCENTED};
 
-    &:hover {
-        transform: scale(1);
-    }
-
-    &::before {
-        transform: translateZ(4rem);
-        &:hover {
-            transform: rotateY(0) rotateX(0) translateZ(1px);
-        }
-    }
-
-    &::after {
-        transform: translateZ(-4rem);
-        &:hover {
-            transform: rotateY(15deg) rotateX(-25deg) translateZ(-1px);
-        }
-    }
+    padding: ${({ theme }) => theme.SPACINGS.SMALL};
+    margin: ${({ theme }) => theme.SPACINGS.SMALL};
 
     @media ${({ theme }) => theme.MEDIAS.LTE_XLARGE} {
         flex-direction: column;

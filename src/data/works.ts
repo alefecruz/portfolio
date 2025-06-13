@@ -5,6 +5,21 @@ export const works: IWorksData = {
         experienceTitle: 'Experiências',
         experienceList: [
             {
+                title: 'Devot',
+                subtitle: 'Devot Fundador | Professor',
+                description:
+                    'Devot é uma iniciativa para ensinar de forma prátiva programação para pessoas que desejam mudar de carreira. As aulas simulam um trabalho real, onde cada aluno deve apresenta seu progresso em reuniões diária e suas atividades são planejadas e revisadas.',
+                period: 'mar 2023 - atual',
+                tagList: [
+                    'Lógica de programação',
+                    'js',
+                    'ts',
+                    'NodeJs',
+                    'ReactJS',
+                    'MySQL',
+                ],
+            },
+            {
                 title: 'Salvus',
                 subtitle: 'Tech lead | Development Mobile Senior',
                 description:
@@ -41,6 +56,21 @@ export const works: IWorksData = {
     EN_US: {
         experienceTitle: 'Experiences',
         experienceList: [
+            {
+                title: 'Devot',
+                subtitle: 'Devot Founder | Teacher',
+                description:
+                    'Devot is an initiative to teach programming in a practical way to people who want to change careers. The classes simulate a real job, where each student must present their progress in daily meetings and their activities are planned and reviewed.',
+                period: 'mar 2023 - atual',
+                tagList: [
+                    'Lógica de programação',
+                    'js',
+                    'ts',
+                    'NodeJs',
+                    'ReactJS',
+                    'MySQL',
+                ],
+            },
             {
                 title: 'Salvus',
                 subtitle: 'Tech lead | Development Mobile Senior',

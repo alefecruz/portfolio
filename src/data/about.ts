@@ -11,7 +11,7 @@ export const about: IAboutData = {
             sizeWidth: 20,
         },
         paragraphs: [
-            'Sou Álefe Cruz, engenheira de Computação formada pela Escola Politécnica de Pernambuco (POLI - UPE), com mais de 5 anos de experiência em desenvolvimento de software. Atualmente, atuo como Tech Lead e Senior Mobile Developer, liderando equipes e projetos que transformam ideias inovadoras em soluções tecnológicas funcionais.',
+            'Sou Álefe Cruz, engenheiro de Computação formado pela Escola Politécnica de Pernambuco (POLI - UPE), com mais de 5 anos de experiência em desenvolvimento de software. Atualmente, atuo como Tech Lead e Senior Mobile Developer, liderando equipes e projetos que transformam ideias inovadoras em soluções tecnológicas funcionais.',
             'Minha jornada no desenvolvimento começou com um profundo interesse em compreender como a tecnologia pode resolver problemas do mundo real. Desde então, aprimorei minhas habilidades trabalhando em projetos que vão desde aplicativos móveis até plataformas web complexas.',
             'Adoro colaborar com equipes multidisciplinares, valorizando a troca de conhecimento e criando soluções robustas e eficientes. Sou conhecido pela minha abordagem analítica e detalhista, garantindo que cada linha de código contribua para um produto final de alta qualidade. Além disso, me mantenho atualizado com as últimas tendências e melhores práticas do setor, participando de conferências, workshops e cursos online.',
         ],

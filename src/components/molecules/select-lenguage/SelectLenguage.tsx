@@ -1,7 +1,7 @@
 'use client';
 
 import { type ReactElement, useState } from 'react';
-
+import useDeviceSize from '@/hook/use-device-size';
 import * as S from './styles';
 
 import { ISelectLenguageProps } from './interfaces';
@@ -18,6 +18,7 @@ const SelectLenguage = ({
 }: ISelectLenguageProps): ReactElement => {
     const [toggle, setToggle] = useState(true);
     const [selected, setSelected] = useState<IIdioma>(initialIdioma);
+    const [width, height] = useDeviceSize();
 
     const idiomaMapper: { [key in IIdioma]: IButtonProps['iconLeftName'] } = {
         PT_BR: 'FLAG_BR',
@@ -32,7 +33,7 @@ const SelectLenguage = ({
     return (
         <S.Container onClick={() => setToggle((curr) => !curr)}>
             {!isHideGlobalIcon && <Icon name="GLOBAL" color="ACCENTED" />}
-            {!isHideLanguageText && window.innerWidth >= 400 && (
+            {!isHideLanguageText && width >= 400 && (
                 <Text color="ACCENTED" format="BUTTON">
                     {translaterMaper[selected]}
                 </Text>
@@ -57,12 +58,11 @@ const SelectLenguage = ({
                             }}
                             isHideLanguageText={isHideLanguageText}
                         >
-                            {!isHideLanguageText &&
-                                window.innerWidth >= 400 && (
-                                    <Text color="ACCENTED" format="BUTTON">
-                                        {translaterMaper[idioma as IIdioma]}
-                                    </Text>
-                                )}
+                            {!isHideLanguageText && width >= 400 && (
+                                <Text color="ACCENTED" format="BUTTON">
+                                    {translaterMaper[idioma as IIdioma]}
+                                </Text>
+                            )}
                             <Icon
                                 name={idiomaMapper[idioma as IIdioma]}
                                 color="ACCENTED"

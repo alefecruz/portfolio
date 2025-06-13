@@ -34,8 +34,12 @@ export const ContentMyInfo = styled.div`
         width: 100%;
         box-shadow: none;
         position: static;
-        padding-top: ${({ theme }) => theme.SPACINGS.HUGE};
+        padding-top: ${({ theme }) => theme.SPACINGS.SMALL};
     }
+`;
+
+export const ContainerToggle = styled.div`
+    margin: ${({ theme }) => theme.SPACINGS.SMALL} 0;
 `;
 
 export const WrapperMyInfo = styled.div`
@@ -61,6 +65,7 @@ export const ContentSocialMedias = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: ${({ theme }) => theme.SPACINGS.SMALL};
 
     @media ${({ theme }) => theme.MEDIAS.LTE_LARGE} {
         width: 60%;

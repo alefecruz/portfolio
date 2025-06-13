@@ -11,6 +11,11 @@ export const Container = styled.button`
     column-gap: 24px;
     background-color: ${({ theme }) => theme.COLORS.BASE};
     box-shadow: 0 0 10px -5px #000000;
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        flex-direction: column;
+        width: 50px;
+    }
 `;
 
 export const Flag = styled.div`
@@ -25,6 +30,12 @@ export const ContentOptions = styled.div`
     box-shadow: 0 0 10px -5px #000000;
 
     border: 5px solid ${({ theme }) => theme.COLORS.ACCENTED};
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        width: 50px;
+        left: -5px;
+        top: 90px;
+    }
 `;
 
 export const SelectFlag = styled.button<{ isHideLanguageText: boolean }>`
@@ -42,5 +53,9 @@ export const SelectFlag = styled.button<{ isHideLanguageText: boolean }>`
 
     &:hover {
         background-color: ${({ theme }) => theme.COLORS.PRIMARY};
+    }
+
+    @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
+        padding: 10px;
     }
 `;

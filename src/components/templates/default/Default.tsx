@@ -56,14 +56,16 @@ const Default = ({
                 {logoTitle && iconLogoName && (
                     <Logo iconName={iconLogoName} title={logoTitle} />
                 )}
-                <ToggleButton
-                    value={true}
-                    onToggle={(value) =>
-                        value
-                            ? handleChangeColorTheme('outuneDark')
-                            : handleChangeColorTheme('outuneLight')
-                    }
-                />
+                <S.ContainerToggle>
+                    <ToggleButton
+                        value={true}
+                        onToggle={(value) =>
+                            value
+                                ? handleChangeColorTheme('outuneDark')
+                                : handleChangeColorTheme('outuneLight')
+                        }
+                    />
+                </S.ContainerToggle>
                 <S.WrapperMyInfo>
                     <Text format="TITLE_2" color="BASE">
                         {title}

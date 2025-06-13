@@ -38,6 +38,10 @@ export const Container = styled.div`
 
     @media ${({ theme }) => theme.MEDIAS.LTE_SMALL} {
         flex-direction: column;
+        transform: none;
+        transform-origin: none;
+        transform-style: none;
+        transition: none;
     }
 `;
 

@@ -32,7 +32,7 @@ const SelectLenguage = ({
     return (
         <S.Container onClick={() => setToggle((curr) => !curr)}>
             {!isHideGlobalIcon && <Icon name="GLOBAL" color="ACCENTED" />}
-            {!isHideLanguageText && (
+            {!isHideLanguageText && window.innerWidth >= 400 && (
                 <Text color="ACCENTED" format="BUTTON">
                     {translaterMaper[selected]}
                 </Text>
@@ -57,11 +57,12 @@ const SelectLenguage = ({
                             }}
                             isHideLanguageText={isHideLanguageText}
                         >
-                            {!isHideLanguageText && (
-                                <Text color="ACCENTED" format="BUTTON">
-                                    {translaterMaper[idioma as IIdioma]}
-                                </Text>
-                            )}
+                            {!isHideLanguageText &&
+                                window.innerWidth >= 400 && (
+                                    <Text color="ACCENTED" format="BUTTON">
+                                        {translaterMaper[idioma as IIdioma]}
+                                    </Text>
+                                )}
                             <Icon
                                 name={idiomaMapper[idioma as IIdioma]}
                                 color="ACCENTED"

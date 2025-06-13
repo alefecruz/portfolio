@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 
 export const ContentLogoInfo = styled.div`
-    margin-left: 30px;
+    margin-left: 10px;
 `;
 
 export const Title = styled.h1`
